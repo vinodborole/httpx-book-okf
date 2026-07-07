@@ -1,0 +1,304 @@
+{
+  "generator": "okf-kit",
+  "okf_version": "0.1",
+  "root_url": "https://www.python-httpx.org/",
+  "updated_at": "2026-07-07T08:53:45.709194+00:00",
+  "config": {
+    "max_depth": 3,
+    "max_pages": 60,
+    "fetcher": "http",
+    "respect_robots": true,
+    "path_prefix": "/"
+  },
+  "page_count": 23,
+  "pages": [
+    {
+      "path": "pages/advanced/authentication.md",
+      "url": "https://www.python-httpx.org/advanced/authentication",
+      "title": "Authentication - HTTPX",
+      "hash": "e3b1389702c8db8fbd7e1bab041dba386b2dfba15123ac10ae853a410075805b"
+    },
+    {
+      "path": "pages/advanced/clients.md",
+      "url": "https://www.python-httpx.org/advanced/clients",
+      "title": "Clients - HTTPX",
+      "hash": "e7b4ab5d3bb9fb0d967384ec30e0a2cf49aca78ce1f8d4a8e035a9c91aae6f32"
+    },
+    {
+      "path": "pages/advanced/event-hooks.md",
+      "url": "https://www.python-httpx.org/advanced/event-hooks",
+      "title": "Event Hooks - HTTPX",
+      "hash": "22f0bcf4763d4348e9a492d91eda2f038c8cc9161b15ae333d1a2d9817a73f5f"
+    },
+    {
+      "path": "pages/advanced/extensions.md",
+      "url": "https://www.python-httpx.org/advanced/extensions",
+      "title": "Extensions - HTTPX",
+      "hash": "fbe643dcc479047664267ef3e8fce6ad1890e4111d3c58e950e7787eab3e9d02"
+    },
+    {
+      "path": "pages/advanced/proxies.md",
+      "url": "https://www.python-httpx.org/advanced/proxies",
+      "title": "Proxies - HTTPX",
+      "hash": "2e3070917e4c3309e8e4bcbd488fe94c57ba647002370d1c1a65b109b867efa8"
+    },
+    {
+      "path": "pages/advanced/resource-limits.md",
+      "url": "https://www.python-httpx.org/advanced/resource-limits",
+      "title": "Resource Limits - HTTPX",
+      "hash": "bc2b861d52f03125e4b4de21d8ada3768cc764defb67856e292ec3ec9edb84a0"
+    },
+    {
+      "path": "pages/advanced/ssl.md",
+      "url": "https://www.python-httpx.org/advanced/ssl",
+      "title": "SSL - HTTPX",
+      "hash": "35a1729f46eca3c8c37148214ef32d0f132cb68347ab85a126f7dc13f891b00e"
+    },
+    {
+      "path": "pages/advanced/text-encodings.md",
+      "url": "https://www.python-httpx.org/advanced/text-encodings",
+      "title": "Text Encodings - HTTPX",
+      "hash": "e28b8e1eec351fbab0cd7a09cca05ce678c41b1e0015eab77c1aa33e23514c8c"
+    },
+    {
+      "path": "pages/advanced/timeouts.md",
+      "url": "https://www.python-httpx.org/advanced/timeouts",
+      "title": "Timeouts - HTTPX",
+      "hash": "1bfc9c59d68c4677bbd999437c3afd1357ae160fa030113733064ce87eacd3f0"
+    },
+    {
+      "path": "pages/advanced/transports.md",
+      "url": "https://www.python-httpx.org/advanced/transports",
+      "title": "Transports - HTTPX",
+      "hash": "ad7501119b1818549593e0af2678320923630ad55cd806f95f03beec705ccb28"
+    },
+    {
+      "path": "pages/api.md",
+      "url": "https://www.python-httpx.org/api",
+      "title": "Developer Interface - HTTPX",
+      "hash": "c6cc8e79c404e2dbb742860ff9bfae587b7208ceeb50e38828353e83ec38d3d6"
+    },
+    {
+      "path": "pages/async.md",
+      "url": "https://www.python-httpx.org/async",
+      "title": "Async Support - HTTPX",
+      "hash": "6bc705b2a95eea027af405269c7449fd39690f4d7003227ceacff9493e4ff6a5"
+    },
+    {
+      "path": "pages/code_of_conduct.md",
+      "url": "https://www.python-httpx.org/code_of_conduct",
+      "title": "Code of Conduct - HTTPX",
+      "hash": "76864f04119f019917b7bb4666d2466ce36f6caf4ffd1985ee8a26d5e8e10784"
+    },
+    {
+      "path": "pages/compatibility.md",
+      "url": "https://www.python-httpx.org/compatibility",
+      "title": "Requests Compatibility - HTTPX",
+      "hash": "6dd1befdc14810b4dbc99c6c348efea2109db18331452c2b1d5c676ba58e15a7"
+    },
+    {
+      "path": "pages/contributing.md",
+      "url": "https://www.python-httpx.org/contributing",
+      "title": "Contributing - HTTPX",
+      "hash": "e9613be6697a63ab7192cb4dec20465c8ca927970c062d41397e256ca518f1ef"
+    },
+    {
+      "path": "pages/environment_variables.md",
+      "url": "https://www.python-httpx.org/environment_variables",
+      "title": "Environment Variables - HTTPX",
+      "hash": "5b33dabb652275982322b8e5c5e4e47b2a9a7db105408a960f6786322444b016"
+    },
+    {
+      "path": "pages/exceptions.md",
+      "url": "https://www.python-httpx.org/exceptions",
+      "title": "Exceptions - HTTPX",
+      "hash": "9d439bc07fe2671191cc4d60c13314b475a66583d2dedb8ecbd7633d77083dc9"
+    },
+    {
+      "path": "pages/home.md",
+      "url": "https://www.python-httpx.org/",
+      "title": "HTTPX",
+      "hash": "085f5e0d5ee8791704964b75b6c564b2669fd9158c622cf0e1a316a58ea3832e"
+    },
+    {
+      "path": "pages/http2.md",
+      "url": "https://www.python-httpx.org/http2",
+      "title": "HTTP/2 Support - HTTPX",
+      "hash": "b7c93bbd1885aba27f663800e842931ba8aadcead2dcf96ef95719b76e65f11e"
+    },
+    {
+      "path": "pages/logging.md",
+      "url": "https://www.python-httpx.org/logging",
+      "title": "Logging - HTTPX",
+      "hash": "ee754800f69270ef76cdb1f907004eac3770ec840ff003f5e10651faf8a62e06"
+    },
+    {
+      "path": "pages/quickstart.md",
+      "url": "https://www.python-httpx.org/quickstart",
+      "title": "QuickStart - HTTPX",
+      "hash": "09ac3f38d1b40e78cf987c27c791592c4ab10c8c8b2f105bfe44d4f93e04cb9f"
+    },
+    {
+      "path": "pages/third_party_packages.md",
+      "url": "https://www.python-httpx.org/third_party_packages",
+      "title": "Third Party Packages - HTTPX",
+      "hash": "2a7b76b0dc07668cf00241528cfdc8d21f5a8c416bde591f058b645c54a85566"
+    },
+    {
+      "path": "pages/troubleshooting.md",
+      "url": "https://www.python-httpx.org/troubleshooting",
+      "title": "Troubleshooting - HTTPX",
+      "hash": "2762f7f91a883deb8b6cfdb6b1850f17aa3e70d9956889f62be3ca2535525292"
+    }
+  ],
+  "edges": [
+    [
+      "pages/advanced/clients.md",
+      "pages/api.md"
+    ],
+    [
+      "pages/advanced/clients.md",
+      "pages/http2.md"
+    ],
+    [
+      "pages/advanced/clients.md",
+      "pages/quickstart.md"
+    ],
+    [
+      "pages/advanced/proxies.md",
+      "pages/troubleshooting.md"
+    ],
+    [
+      "pages/advanced/ssl.md",
+      "pages/environment_variables.md"
+    ],
+    [
+      "pages/advanced/ssl.md",
+      "pages/home.md"
+    ],
+    [
+      "pages/advanced/text-encodings.md",
+      "pages/home.md"
+    ],
+    [
+      "pages/advanced/transports.md",
+      "pages/environment_variables.md"
+    ],
+    [
+      "pages/api.md",
+      "pages/advanced/clients.md"
+    ],
+    [
+      "pages/api.md",
+      "pages/quickstart.md"
+    ],
+    [
+      "pages/async.md",
+      "pages/advanced/clients.md"
+    ],
+    [
+      "pages/async.md",
+      "pages/advanced/transports.md"
+    ],
+    [
+      "pages/async.md",
+      "pages/home.md"
+    ],
+    [
+      "pages/compatibility.md",
+      "pages/advanced/clients.md"
+    ],
+    [
+      "pages/compatibility.md",
+      "pages/advanced/transports.md"
+    ],
+    [
+      "pages/compatibility.md",
+      "pages/exceptions.md"
+    ],
+    [
+      "pages/compatibility.md",
+      "pages/home.md"
+    ],
+    [
+      "pages/compatibility.md",
+      "pages/quickstart.md"
+    ],
+    [
+      "pages/contributing.md",
+      "pages/advanced/proxies.md"
+    ],
+    [
+      "pages/contributing.md",
+      "pages/advanced/ssl.md"
+    ],
+    [
+      "pages/contributing.md",
+      "pages/home.md"
+    ],
+    [
+      "pages/environment_variables.md",
+      "pages/advanced/proxies.md"
+    ],
+    [
+      "pages/exceptions.md",
+      "pages/quickstart.md"
+    ],
+    [
+      "pages/home.md",
+      "pages/advanced/transports.md"
+    ],
+    [
+      "pages/home.md",
+      "pages/api.md"
+    ],
+    [
+      "pages/home.md",
+      "pages/async.md"
+    ],
+    [
+      "pages/home.md",
+      "pages/compatibility.md"
+    ],
+    [
+      "pages/home.md",
+      "pages/http2.md"
+    ],
+    [
+      "pages/home.md",
+      "pages/quickstart.md"
+    ],
+    [
+      "pages/home.md",
+      "pages/third_party_packages.md"
+    ],
+    [
+      "pages/http2.md",
+      "pages/home.md"
+    ],
+    [
+      "pages/quickstart.md",
+      "pages/advanced/timeouts.md"
+    ],
+    [
+      "pages/quickstart.md",
+      "pages/exceptions.md"
+    ],
+    [
+      "pages/third_party_packages.md",
+      "pages/advanced/authentication.md"
+    ],
+    [
+      "pages/third_party_packages.md",
+      "pages/advanced/transports.md"
+    ],
+    [
+      "pages/third_party_packages.md",
+      "pages/home.md"
+    ],
+    [
+      "pages/troubleshooting.md",
+      "pages/advanced/proxies.md"
+    ]
+  ]
+}
