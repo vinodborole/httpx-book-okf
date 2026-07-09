@@ -3,7 +3,7 @@ type: Web Page
 title: Third Party Packages - HTTPX
 description: A next-generation HTTP client for Python.
 resource: https://www.python-httpx.org/third_party_packages
-timestamp: '2026-07-07T08:53:45.702113+00:00'
+timestamp: '2026-07-09T12:16:45.224822+00:00'
 ---
 
 # Third Party Packages
@@ -18,7 +18,7 @@ An elegant HTTP Cache implementation for HTTPX and HTTP Core.
 
 ### HTTPX-Auth
 
-Provides authentication classes to be used with HTTPX's authentication parameter.
+Provides authentication classes to be used with HTTPX's [authentication parameter](../advanced/authentication/#customizing-authentication).
 
 ### httpx-caching
 
@@ -46,7 +46,7 @@ WebSocket support for HTTPX.
 
 ### pytest-HTTPX
 
-Provides a pytest fixture to mock HTTPX within test cases.
+Provides a [pytest](https://docs.pytest.org/en/latest/) fixture to mock HTTPX within test cases.
 
 ### RESPX
 
@@ -60,11 +60,11 @@ A fast and powerful RPC framework based on ASGI/WSGI. Use HTTPX as the client of
 
 ### Authlib
 
-A python library for building OAuth and OpenID Connect clients and servers. Includes an OAuth HTTPX client.
+A python library for building OAuth and OpenID Connect clients and servers. Includes an [OAuth HTTPX client](https://docs.authlib.org/en/latest/client/httpx.html).
 
 ### Gidgethub
 
-An asynchronous GitHub API library. Includes HTTPX support.
+An asynchronous GitHub API library. Includes [HTTPX support](https://gidgethub.readthedocs.io/en/latest/httpx.html).
 
 ### httpdbg
 
@@ -78,7 +78,7 @@ Record and repeat requests.
 
 ### urllib3-transport
 
-This public gist provides an example implementation for a custom transport implementation on top of the battle-tested `urllib3` library.
+This public gist provides an example implementation for a [custom transport](../advanced/transports/#custom-transports) implementation on top of the battle-tested [ urllib3](https://urllib3.readthedocs.io) library.
 
 # Citations
 

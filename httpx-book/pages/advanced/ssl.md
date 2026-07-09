@@ -3,7 +3,7 @@ type: Web Page
 title: SSL - HTTPX
 description: A next-generation HTTP client for Python.
 resource: https://www.python-httpx.org/advanced/ssl
-timestamp: '2026-07-07T08:53:45.702113+00:00'
+timestamp: '2026-07-09T12:16:45.224822+00:00'
 ---
 
 # SSL
@@ -28,9 +28,9 @@ You can disable SSL verification completely and allow insecure requests...
 
 If you're using a `Client()` instance you should pass any `verify=<...>` configuration when instantiating the client.
 
-By default the certifi CA bundle is used for SSL verification.
+By default the [certifi CA bundle](https://certifiio.readthedocs.io/en/latest/) is used for SSL verification.
 
-For more complex configurations you can pass an SSL Context instance...
+For more complex configurations you can pass an [SSL Context](https://docs.python.org/3/library/ssl.html) instance...
 
 ```
 import certifi
@@ -40,7 +40,7 @@ import ssl
 ctx = ssl.create_default_context(cafile=certifi.where())
 client = httpx.Client(verify=ctx)
 ```
-Using the `truststore` package to support system certificate stores...
+Using [the  truststore package](https://truststore.readthedocs.io/) to support system certificate stores...
 
 ```
 import ssl
@@ -50,7 +50,7 @@ import httpx
 ctx = truststore.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
 client = httpx.Client(verify=ctx)
 ```
-Loding an alternative certificate verification store using the standard SSL context API...
+Loding an alternative certificate verification store using [the standard SSL context API](https://docs.python.org/3/library/ssl.html)...
 
 ```
 import httpx
@@ -63,7 +63,7 @@ client = httpx.Client(verify=ctx)
 
 Client side certificates allow a remote server to verify the client. They tend to be used within private organizations to authenticate requests to remote servers.
 
-You can specify client-side certificates, using the `.load_cert_chain()` API...
+You can specify client-side certificates, using the [ .load_cert_chain()](https://docs.python.org/3/library/ssl.html#ssl.SSLContext.load_cert_chain) API...
 
 ```
 ctx = ssl.create_default_context()
@@ -72,7 +72,7 @@ client = httpx.Client(verify=ctx)
 ```
 ### Working with `SSL_CERT_FILE` and `SSL_CERT_DIR`
 
-`httpx` does respect the `SSL_CERT_FILE` and `SSL_CERT_DIR` environment variables by default. For details, refer to the section on the environment variables page.
+`httpx` does respect the `SSL_CERT_FILE` and `SSL_CERT_DIR` environment variables by default. For details, refer to [the section on the environment variables page](../../environment_variables/#ssl_cert_file).
 
 ### Making HTTPS requests to a local server
 
@@ -80,8 +80,8 @@ When making requests to local servers, such as a development server running on `
 
 If you do need to make HTTPS connections to a local server, for example to test an HTTPS-only service, you will need to create and use your own certificates. Here's one way to do it...
 
-- Use trustme to generate a pair of server key/cert files, and a client cert file.
-- Pass the server key/cert files when starting your local server. (This depends on the particular web server you're using. For example, Uvicorn provides the `--ssl-keyfile`and`--ssl-certfile`options.)
+- Use [trustme](https://github.com/python-trio/trustme)to generate a pair of server key/cert files, and a client cert file.
+- Pass the server key/cert files when starting your local server. (This depends on the particular web server you're using. For example, [Uvicorn](https://www.uvicorn.org)provides the`--ssl-keyfile`and`--ssl-certfile`options.)
 - Configure `httpx`to use the certificates stored in`client.pem`.
 
 ```

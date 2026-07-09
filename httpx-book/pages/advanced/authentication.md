@@ -3,7 +3,7 @@ type: Web Page
 title: Authentication - HTTPX
 description: A next-generation HTTP client for Python.
 resource: https://www.python-httpx.org/advanced/authentication
-timestamp: '2026-07-07T08:53:45.702113+00:00'
+timestamp: '2026-07-09T12:16:45.224822+00:00'
 ---
 
 # Authentication
@@ -48,7 +48,7 @@ HTTP digest authentication is a challenge-response authentication scheme. Unlike
 ```
 ## NetRC authentication
 
-HTTPX can be configured to use a `.netrc` config file for authentication.
+HTTPX can be configured to use [a  .netrc config file](https://everything.curl.dev/usingcurl/netrc) for authentication.
 
 The `.netrc` config file allows authentication credentials to be associated with specified hosts. When a request is made to a host that is found in the netrc file, the username and password will be included using HTTP basic authentication.
 
@@ -83,9 +83,9 @@ or fallback to the default.
 >>> auth = httpx.NetRCAuth(file=os.environ.get("NETRC"))
 >>> client = httpx.Client(auth=auth)
 ```
-The `NetRCAuth()` class uses the `netrc.netrc()` function from the Python standard library. See the documentation there for more details on exceptions that may be raised if the `.netrc` file is not found, or cannot be parsed.
+The `NetRCAuth()` class uses [the  netrc.netrc() function from the Python standard library](https://docs.python.org/3/library/netrc.html). See the documentation there for more details on exceptions that may be raised if the 
 
-## Custom authentication schemes
+`.netrc` file is not found, or cannot be parsed.## Custom authentication schemes
 
 When issuing requests or instantiating a client, the `auth` argument can be used to pass an authentication scheme to use. The `auth` argument may be one of the following...
 

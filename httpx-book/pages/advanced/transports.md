@@ -3,7 +3,7 @@ type: Web Page
 title: Transports - HTTPX
 description: A next-generation HTTP client for Python.
 resource: https://www.python-httpx.org/advanced/transports
-timestamp: '2026-07-07T08:53:45.702113+00:00'
+timestamp: '2026-07-09T12:16:45.224822+00:00'
 ---
 
 # Transports
@@ -23,7 +23,7 @@ class directly, and pass it to the client instance. One example is the
 >>> transport = httpx.HTTPTransport(local_address="0.0.0.0")
 >>> client = httpx.Client(transport=transport)
 ```
-Connection retries are also available via this interface. Requests will be retried the given number of times in case an `httpx.ConnectError` or an `httpx.ConnectTimeout` occurs, allowing smoother operation under flaky networks. If you need other forms of retry behaviors, such as handling read/write errors or reacting to `503 Service Unavailable`, consider general-purpose tools such as tenacity.
+Connection retries are also available via this interface. Requests will be retried the given number of times in case an `httpx.ConnectError` or an `httpx.ConnectTimeout` occurs, allowing smoother operation under flaky networks. If you need other forms of retry behaviors, such as handling read/write errors or reacting to `503 Service Unavailable`, consider general-purpose tools such as [tenacity](https://github.com/jd/tenacity).
 
 ```
 >>> import httpx
@@ -131,13 +131,13 @@ transport = httpx.ASGITransport(app=app, client=("1.2.3.4", 123))
 async with httpx.AsyncClient(transport=transport, base_url="http://testserver") as client:
     ...
 ```
-See the ASGI documentation for more details on the `client` and `root_path` keys.
+See [the ASGI documentation](https://asgi.readthedocs.io/en/latest/specs/www.html#connection-scope) for more details on the `client` and `root_path` keys.
 
 ### ASGI startup and shutdown
 
 It is not in the scope of HTTPX to trigger ASGI lifespan events of your app.
 
-However it is suggested to use `LifespanManager` from asgi-lifespan in pair with `AsyncClient`.
+However it is suggested to use `LifespanManager` from [asgi-lifespan](https://github.com/florimondmanca/asgi-lifespan#usage) in pair with `AsyncClient`.
 
 ## Custom transports
 
@@ -240,11 +240,14 @@ else:
     transport = httpx.HTTPTransport()
 client = httpx.Client(transport=transport)
 ```
-For more advanced use-cases you might want to take a look at either the third-party mocking library, RESPX, or the pytest-httpx library.
+For more advanced use-cases you might want to take a look at either [the third-party
+mocking library, RESPX](https://lundberg.github.io/respx/), or the [pytest-httpx library](https://github.com/Colin-b/pytest_httpx).
 
 ## Mounting transports
 
-You can also mount transports against given schemes or domains, to control which transport an outgoing request should be routed via, with the same style used for specifying proxy routing.
+You can also mount transports against given schemes or domains, to control
+which transport an outgoing request should be routed via, with [the same style
+used for specifying proxy routing](#routing).
 
 ```
 import httpx
@@ -402,8 +405,12 @@ mounts = {
 
 There are also environment variables that can be used to control the dictionary of the client mounts. They can be used to configure HTTP proxying for clients.
 
-See documentation on `HTTP_PROXY`, `HTTPS_PROXY`, `ALL_PROXY`
-and `NO_PROXY` for more information.
+See documentation on [ HTTP_PROXY, HTTPS_PROXY, ALL_PROXY](../../environment_variables/#http_proxy-https_proxy-all_proxy)
+and 
+
+[for more information.](../../environment_variables/#no_proxy)
+
+`NO_PROXY`
 
 # Citations
 

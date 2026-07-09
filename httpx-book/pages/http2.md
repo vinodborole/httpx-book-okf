@@ -3,7 +3,7 @@ type: Web Page
 title: HTTP/2 Support - HTTPX
 description: A next-generation HTTP client for Python.
 resource: https://www.python-httpx.org/http2
-timestamp: '2026-07-07T08:53:45.702113+00:00'
+timestamp: '2026-07-09T12:16:45.224822+00:00'
 ---
 
 # HTTP/2
@@ -14,7 +14,7 @@ Rather than the text format that HTTP/1.1 uses, HTTP/2 is a binary format. The b
 
 HTTP/2 also provides support for functionality such as response prioritization, and server push.
 
-For a comprehensive guide to HTTP/2 you may want to check out "http2 explained".
+For a comprehensive guide to HTTP/2 you may want to check out "[http2 explained](https://http2-explained.haxx.se/)".
 
 ## Enabling HTTP/2
 

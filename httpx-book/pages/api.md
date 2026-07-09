@@ -3,7 +3,7 @@ type: Web Page
 title: Developer Interface - HTTPX
 description: A next-generation HTTP client for Python.
 resource: https://www.python-httpx.org/api
-timestamp: '2026-07-07T08:53:45.702113+00:00'
+timestamp: '2026-07-09T12:16:45.224822+00:00'
 ---
 
 # Developer Interface
@@ -334,7 +334,7 @@ instead of loading it into memory at once.
 
 **Parameters**: See `httpx.request`.
 
-See also: Streaming Responses
+See also: [Streaming Responses](/quickstart#streaming-responses)
 
 `Client`
 
@@ -415,7 +415,7 @@ Usage:
 
 **auth**Authentication class used when none is passed at the request-level.
 
-See also Authentication.
+See also [Authentication](/quickstart/#authentication).
 
 **request***self*,
 
@@ -456,7 +456,7 @@ request = client.build_request(...)
 response = client.send(request, ...)
 ```
 See `Client.build_request()`, `Client.send()` and
-Merging of configuration for how the various parameters
+[Merging of configuration](/advanced/clients/#merging-of-configuration) for how the various parameters
 are merged with client-level configuration.
 
 **get***self*,
@@ -686,7 +686,7 @@ instead of loading it into memory at once.
 
 **Parameters**: See `httpx.request`.
 
-See also: Streaming Responses
+See also: [Streaming Responses](/quickstart#streaming-responses)
 
 **build_request***self*,
 
@@ -719,7 +719,7 @@ Build and return a request instance.
 - The `params`,`headers`and`cookies`arguments are merged with any values set on the client.
 - The `url`argument is merged with any`base_url`set on the client.
 
-See also: Request instances
+See also: [Request instances](/advanced/clients/#request-instances)
 
 **send***self*,
 
@@ -741,7 +741,7 @@ Typically you'll want to build one with `Client.build_request()`
 so that any client-level configuration is merged into the request,
 but passing an explicit `httpx.Request()` is supported as well.
 
-See also: Request instances
+See also: [Request instances](/advanced/clients/#request-instances)
 
 **close***self*)
 
@@ -826,7 +826,7 @@ Usage:
 
 **auth**Authentication class used when none is passed at the request-level.
 
-See also Authentication.
+See also [Authentication](/quickstart/#authentication).
 
 *async*
 
@@ -869,7 +869,7 @@ request = client.build_request(...)
 response = await client.send(request, ...)
 ```
 See `AsyncClient.build_request()`, `AsyncClient.send()`
-and Merging of configuration for how the various parameters
+and [Merging of configuration](/advanced/clients/#merging-of-configuration) for how the various parameters
 are merged with client-level configuration.
 
 *async*
@@ -1113,7 +1113,7 @@ instead of loading it into memory at once.
 
 **Parameters**: See `httpx.request`.
 
-See also: Streaming Responses
+See also: [Streaming Responses](/quickstart#streaming-responses)
 
 **build_request***self*,
 
@@ -1146,7 +1146,7 @@ Build and return a request instance.
 - The `params`,`headers`and`cookies`arguments are merged with any values set on the client.
 - The `url`argument is merged with any`base_url`set on the client.
 
-See also: Request instances
+See also: [Request instances](/advanced/clients/#request-instances)
 
 *async*
 
@@ -1170,7 +1170,7 @@ Typically you'll want to build one with `AsyncClient.build_request()`
 so that any client-level configuration is merged into the request,
 but passing an explicit `httpx.Request()` is supported as well.
 
-See also: Request instances
+See also: [Request instances](/advanced/clients/#request-instances)
 
 *async*
 
@@ -1196,8 +1196,8 @@ Close transport and proxies.
 - `.next_request`-- **Optional[Request]**
 - `.cookies`-- **Cookies**
 - `.history`-- **List[Response]**
-- `.elapsed`-- **timedelta**
-- The amount of time elapsed between sending the request and calling `close()`on the corresponding response received for that request. total_seconds() to correctly get the total elapsed seconds.
+- `.elapsed`-- [timedelta](https://docs.python.org/3/library/datetime.html)
+- The amount of time elapsed between sending the request and calling `close()`on the corresponding response received for that request.[total_seconds()](https://docs.python.org/3/library/datetime.html#datetime.timedelta.total_seconds)to correctly get the total elapsed seconds.
 - `def .raise_for_status()`-- **Response**
 - `def .json()`-- **Any**
 - `def .read()`-- **bytes**

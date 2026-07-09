@@ -3,7 +3,7 @@ type: Web Page
 title: Requests Compatibility - HTTPX
 description: A next-generation HTTP client for Python.
 resource: https://www.python-httpx.org/compatibility
-timestamp: '2026-07-07T08:53:45.702113+00:00'
+timestamp: '2026-07-09T12:16:45.224822+00:00'
 ---
 
 # Requests Compatibility Guide
@@ -17,7 +17,8 @@ This documentation outlines places where the API differs...
 
 Unlike `requests`, HTTPX does **not follow redirects by default**.
 
-We differ in behaviour here because auto-redirects can easily mask unnecessary network calls being made.
+We differ in behaviour here [because auto-redirects can easily mask unnecessary network
+calls being made](https://github.com/encode/httpx/discussions/1785).
 
 You can still enable behaviour to automatically follow redirects, but you need to do so explicitly...
 
@@ -140,7 +141,7 @@ Within a `stream()` block request data is made available with:
 
 ## Timeouts
 
-HTTPX defaults to including reasonable timeouts for all network operations, while Requests has no timeouts by default.
+HTTPX defaults to including reasonable [timeouts](../quickstart/#timeouts) for all network operations, while Requests has no timeouts by default.
 
 To get the same behavior as Requests, set the `timeout` parameter to `None`:
 
@@ -149,7 +150,9 @@ httpx.get('https://www.example.com', timeout=None)
 ```
 ## Proxy keys
 
-HTTPX uses the mounts argument for HTTP proxying and transport routing. It can do much more than proxies and allows you to configure more than just the proxy route. For more detailed documentation, see Mounting Transports.
+HTTPX uses the mounts argument for HTTP proxying and transport routing.
+It can do much more than proxies and allows you to configure more than just the proxy route.
+For more detailed documentation, see [Mounting Transports](../advanced/transports/#mounting-transports).
 
 When using `httpx.Client(mounts={...})` to map to a selection of different transports, we use full URL schemes, such as `mounts={"http://": ..., "https://": ...}`.
 
@@ -184,23 +187,23 @@ We don't support `response.is_ok` since the naming is ambiguous there, and might
 
 ## Request instantiation
 
-There is no notion of prepared requests in HTTPX. If you need to customize request instantiation, see Request instances.
+There is no notion of [prepared requests](https://requests.readthedocs.io/en/stable/user/advanced/#prepared-requests) in HTTPX. If you need to customize request instantiation, see [Request instances](../advanced/clients/#request-instances).
 
-Besides, `httpx.Request()` does not support the `auth`, `timeout`, `follow_redirects`, `mounts`, `verify` and `cert` parameters. However these are available in `httpx.request`, `httpx.get`, `httpx.post` etc., as well as on `Client` instances.
+Besides, `httpx.Request()` does not support the `auth`, `timeout`, `follow_redirects`, `mounts`, `verify` and `cert` parameters. However these are available in `httpx.request`, `httpx.get`, `httpx.post` etc., as well as on [ Client instances](../advanced/clients/#client-instances).
 
 ## Mocking
 
-If you need to mock HTTPX the same way that test utilities like `responses` and `requests-mock` does for `requests`, see RESPX.
+If you need to mock HTTPX the same way that test utilities like `responses` and `requests-mock` does for `requests`, see [RESPX](https://github.com/lundberg/respx).
 
 ## Caching
 
-If you use `cachecontrol` or `requests-cache` to add HTTP Caching support to the `requests` library, you can use Hishel for HTTPX.
+If you use `cachecontrol` or `requests-cache` to add HTTP Caching support to the `requests` library, you can use [Hishel](https://hishel.com) for HTTPX.
 
 ## Networking layer
 
-`requests` defers most of its HTTP networking code to the excellent `urllib3` library.
+`requests` defers most of its HTTP networking code to the excellent [ urllib3 library](https://urllib3.readthedocs.io/en/latest/).
 
-On the other hand, HTTPX uses HTTPCore as its core HTTP networking layer, which is a different project than `urllib3`.
+On the other hand, HTTPX uses [HTTPCore](https://github.com/encode/httpcore) as its core HTTP networking layer, which is a different project than `urllib3`.
 
 ## Query Parameters
 
@@ -210,15 +213,15 @@ For both query params (`params=`) and form data (`data=`), `requests` supports s
 
 ## Event Hooks
 
-`requests` allows event hooks to mutate `Request` and `Response` objects. See examples given in the documentation for `requests`.
+`requests` allows event hooks to mutate `Request` and `Response` objects. See [examples](https://requests.readthedocs.io/en/master/user/advanced/#event-hooks) given in the documentation for `requests`.
 
 In HTTPX, event hooks may access properties of requests and responses, but event hook callbacks cannot mutate the original request/response.
 
-If you are looking for more control, consider checking out Custom Transports.
+If you are looking for more control, consider checking out [Custom Transports](../advanced/transports/#custom-transports).
 
 ## Exceptions and Errors
 
-`requests` exception hierarchy is slightly different to the `httpx` exception hierarchy. `requests` exposes a top level `RequestException`, where as `httpx` exposes a top level `HTTPError`. see the exceptions exposes in requests here. See the `httpx` error hierarchy here.
+`requests` exception hierarchy is slightly different to the `httpx` exception hierarchy. `requests` exposes a top level `RequestException`, where as `httpx` exposes a top level `HTTPError`. see the exceptions exposes in requests [here](https://requests.readthedocs.io/en/latest/_modules/requests/exceptions/). See the `httpx` error hierarchy [here](https://www.python-httpx.org/exceptions/).
 
 # Citations
 

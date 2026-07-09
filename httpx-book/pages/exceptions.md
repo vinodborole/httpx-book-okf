@@ -3,14 +3,14 @@ type: Web Page
 title: Exceptions - HTTPX
 description: A next-generation HTTP client for Python.
 resource: https://www.python-httpx.org/exceptions
-timestamp: '2026-07-07T08:53:45.702113+00:00'
+timestamp: '2026-07-09T12:16:45.224822+00:00'
 ---
 
 # Exceptions
 
 This page lists exceptions that may be raised when using HTTPX.
 
-For an overview of how to work with HTTPX exceptions, see Exceptions (Quickstart).
+For an overview of how to work with HTTPX exceptions, see [Exceptions (Quickstart)](../quickstart/#exceptions).
 
 ## The exception hierarchy
 

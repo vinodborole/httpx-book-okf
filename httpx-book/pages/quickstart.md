@@ -3,7 +3,7 @@ type: Web Page
 title: QuickStart - HTTPX
 description: A next-generation HTTP client for Python.
 resource: https://www.python-httpx.org/quickstart
-timestamp: '2026-07-07T08:53:45.702113+00:00'
+timestamp: '2026-07-09T12:16:45.224822+00:00'
 ---
 
 # QuickStart
@@ -305,7 +305,7 @@ The `Headers` data type is case-insensitive, so you can use any capitalization.
 >>> r.headers.get('content-type')
 'application/json'
 ```
-Multiple values for a single response header are represented as a single comma-separated value, as per RFC 7230:
+Multiple values for a single response header are represented as a single comma-separated value, as per [RFC 7230](https://tools.ietf.org/html/rfc7230#section-3.2):
 
 A recipient MAY combine multiple header fields with the same field name into one “field-name: field-value” pair, without changing the semantics of the message, by appending each subsequent field-value to the combined field value in order, separated by a comma.
 
@@ -425,7 +425,7 @@ You can also disable the timeout behavior completely...
 ```
 >>> httpx.get('https://github.com/', timeout=None)
 ```
-For advanced timeout management, see Timeout fine-tuning.
+For advanced timeout management, see [Timeout fine-tuning](../advanced/timeouts/#fine-tuning-the-configuration).
 
 ## Authentication
 
@@ -496,7 +496,7 @@ except httpx.RequestError as exc:
 except httpx.HTTPStatusError as exc:
     print(f"Error response {exc.response.status_code} while requesting {exc.request.url!r}.")
 ```
-For a full list of available exceptions, see Exceptions (API Reference).
+For a full list of available exceptions, see [Exceptions (API Reference)](../exceptions/).
 
 # Citations
 

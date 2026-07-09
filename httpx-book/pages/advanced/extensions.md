@@ -3,14 +3,14 @@ type: Web Page
 title: Extensions - HTTPX
 description: A next-generation HTTP client for Python.
 resource: https://www.python-httpx.org/advanced/extensions
-timestamp: '2026-07-07T08:53:45.702113+00:00'
+timestamp: '2026-07-09T12:16:45.224822+00:00'
 ---
 
 # Extensions
 
 Request and response extensions provide a untyped space where additional information may be added.
 
-Extensions should be used for features that may not be available on all transports, and that do not fit neatly into the simplified request/response model that the underlying `httpcore` package uses as its API.
+Extensions should be used for features that may not be available on all transports, and that do not fit neatly into [the simplified request/response model](https://www.encode.io/httpcore/extensions/) that the underlying `httpcore` package uses as its API.
 
 Several extensions are supported on the request:
 
@@ -141,7 +141,7 @@ This extension is how the `httpx` timeouts are implemented, ensuring that the ti
 
 `"target"`
 
-The target that is used as the HTTP target instead of the URL path.
+The target that is used as [the HTTP target instead of the URL path](https://datatracker.ietf.org/doc/html/rfc2616#section-5.1.2).
 
 This enables support constructing requests that would otherwise be unsupported.
 
@@ -214,7 +214,7 @@ The interface provided by the network stream:
 
 This API can be used as the foundation for working with HTTP proxies, WebSocket upgrades, and other advanced use-cases.
 
-See the network backends documentation for more information on working directly with network streams.
+See the [network backends documentation](https://www.encode.io/httpcore/network-backends/) for more information on working directly with network streams.
 
 **Extra network information**
 

@@ -3,7 +3,7 @@ type: Web Page
 title: Environment Variables - HTTPX
 description: A next-generation HTTP client for Python.
 resource: https://www.python-httpx.org/environment_variables
-timestamp: '2026-07-07T08:53:45.702113+00:00'
+timestamp: '2026-07-09T12:16:45.224822+00:00'
 ---
 
 # Environment Variables
@@ -20,7 +20,7 @@ Here is a list of environment variables that HTTPX recognizes and what function 
 
 The environment variables documented below are used as a convention by various HTTP tooling, including:
 
-For more information on using proxies in HTTPX, see HTTP Proxying.
+For more information on using proxies in HTTPX, see [HTTP Proxying](../advanced/proxies/#http-proxying).
 
 `HTTP_PROXY`, `HTTPS_PROXY`, `ALL_PROXY`
 
@@ -63,9 +63,9 @@ SSL_CERT_FILE=/path/to/ca-certs/ca-bundle.crt python -c "import httpx; httpx.get
 ```
 `SSL_CERT_DIR`
 
-Valid values: a directory following an OpenSSL specific layout.
+Valid values: a directory following an [OpenSSL specific layout](https://www.openssl.org/docs/manmaster/man3/SSL_CTX_load_verify_locations.html).
 
-If this environment variable is set and the directory follows an OpenSSL specific layout (ie. you ran `c_rehash`) then HTTPX will load CA certificates from this directory instead of the default location.
+If this environment variable is set and the directory follows an [OpenSSL specific layout](https://www.openssl.org/docs/manmaster/man3/SSL_CTX_load_verify_locations.html) (ie. you ran `c_rehash`) then HTTPX will load CA certificates from this directory instead of the default location.
 
 Example:
 

@@ -3,7 +3,7 @@ type: Web Page
 title: Text Encodings - HTTPX
 description: A next-generation HTTP client for Python.
 resource: https://www.python-httpx.org/advanced/text-encodings
-timestamp: '2026-07-07T08:53:45.702113+00:00'
+timestamp: '2026-07-09T12:16:45.224822+00:00'
 ---
 
 # Text Encodings
@@ -54,8 +54,8 @@ To use auto-detection you need to set the `default_encoding` argument to a calla
 
 There are two widely used Python packages which both handle this functionality:
 
-- `chardet`- This is a well established package, and is a port of the auto-detection code in Mozilla.
-- `charset-normalizer`- A newer package, motivated by- `chardet`, with a different approach.
+- `chardet`- [the auto-detection code in Mozilla](https://www-archive.mozilla.org/projects/intl/chardet.html).
+- `charset-normalizer`- `chardet`, with a different approach.
 
 Let's take a look at installing autodetection using one of these packages...
 

@@ -3,7 +3,7 @@ type: Web Page
 title: HTTPX
 description: A next-generation HTTP client for Python.
 resource: https://www.python-httpx.org/
-timestamp: '2026-07-07T08:53:45.702113+00:00'
+timestamp: '2026-07-09T12:16:45.224822+00:00'
 ---
 
 # HTTPX
@@ -43,10 +43,10 @@ Sending a request...
 
 HTTPX builds on the well-established usability of `requests`, and gives you:
 
-- A broadly requests-compatible API.
-- Standard synchronous interface, but with async support if you need it.
-- HTTP/1.1 and HTTP/2 support.
-- Ability to make requests directly to WSGI applications or ASGI applications.
+- A broadly [requests-compatible API](compatibility/).
+- Standard synchronous interface, but with [async support if you need it](async/).
+- HTTP/1.1 [and HTTP/2 support](http2/).
+- Ability to make requests directly to [WSGI applications](advanced/transports/#wsgi-transport)or[ASGI applications](advanced/transports/#asgi-transport).
 - Strict timeouts everywhere.
 - Fully type annotated.
 - 100% test coverage.
@@ -71,14 +71,14 @@ Plus all the standard features of `requests`...
 
 ## Documentation
 
-For a run-through of all the basics, head over to the QuickStart.
+For a run-through of all the basics, head over to the [QuickStart](quickstart/).
 
 For more advanced topics, see the **Advanced** section,
-the async support section, or the HTTP/2 section.
+the [async support](async/) section, or the [HTTP/2](http2/) section.
 
-The Developer Interface provides a comprehensive API reference.
+The [Developer Interface](api/) provides a comprehensive API reference.
 
-To find out about tools that integrate with HTTPX, see Third Party Packages.
+To find out about tools that integrate with HTTPX, see [Third Party Packages](third_party_packages/).
 
 ## Dependencies
 

@@ -3,7 +3,7 @@ type: Web Page
 title: Troubleshooting - HTTPX
 description: A next-generation HTTP client for Python.
 resource: https://www.python-httpx.org/troubleshooting
-timestamp: '2026-07-07T08:53:45.702113+00:00'
+timestamp: '2026-07-09T12:16:45.224822+00:00'
 ---
 
 # Troubleshooting
@@ -19,7 +19,7 @@ This page lists some common problems or issues you could encounter while develop
 ```
 httpx.ProxyError: _ssl.c:1091: The handshake operation timed out
 ```
-**Similar issues**: encode/httpx#1412, encode/httpx#1433
+**Similar issues**: [encode/httpx#1412](https://github.com/encode/httpx/issues/1412), [encode/httpx#1433](https://github.com/encode/httpx/issues/1433)
 
 **Resolution**: it is likely that you've set up your proxies like this...
 
@@ -31,7 +31,7 @@ mounts = {
 ```
 Using this setup, you're telling HTTPX to connect to the proxy using HTTP for HTTP requests, and using HTTPS for HTTPS requests.
 
-But if you get the error above, it is likely that your proxy doesn't support connecting via HTTPS. Don't worry: that's a common gotcha.
+But if you get the error above, it is likely that your proxy doesn't support connecting via HTTPS. Don't worry: that's a [common gotcha](../advanced/proxies/#http-proxies).
 
 Change the scheme of your HTTPS proxy to `http://...` instead of `https://...`:
 
@@ -48,7 +48,7 @@ proxy = "http://myproxy.org"
 with httpx.Client(proxy=proxy) as client:
   ...
 ```
-For more information, see Proxies: FORWARD vs TUNNEL.
+For more information, see [Proxies: FORWARD vs TUNNEL](../advanced/proxies/#forward-vs-tunnel).
 
 ### Error when making requests to an HTTPS proxy
 
@@ -57,9 +57,9 @@ For more information, see Proxies: FORWARD vs TUNNEL.
 ```
 httpx.ProxyError: [SSL: PRE_MAC_LENGTH_TOO_LONG] invalid alert (_ssl.c:1091)
 ```
-**Similar issues**: encode/httpx#1424.
+**Similar issues**: [encode/httpx#1424](https://github.com/encode/httpx/issues/1424).
 
-**Resolution**: HTTPX does not properly support HTTPS proxies at this time. If that's something you're interested in having, please see encode/httpx#1434 and consider lending a hand there.
+**Resolution**: HTTPX does not properly support HTTPS proxies at this time. If that's something you're interested in having, please see [encode/httpx#1434](https://github.com/encode/httpx/issues/1434) and consider lending a hand there.
 
 # Citations
 

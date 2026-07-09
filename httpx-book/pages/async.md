@@ -3,7 +3,7 @@ type: Web Page
 title: Async Support - HTTPX
 description: A next-generation HTTP client for Python.
 resource: https://www.python-httpx.org/async
-timestamp: '2026-07-07T08:53:45.702113+00:00'
+timestamp: '2026-07-09T12:16:45.224822+00:00'
 ---
 
 # Async Support
@@ -27,7 +27,7 @@ To make asynchronous requests, you'll need an `AsyncClient`.
 ```
 Tip
 
-Use IPython or Python 3.9+ with `python -m asyncio` to try this code interactively, as they support executing `async`/`await` expressions in the console.
+Use [IPython](https://ipython.readthedocs.io/en/stable/) or Python 3.9+ with `python -m asyncio` to try this code interactively, as they support executing `async`/`await` expressions in the console.
 
 ## API Differences
 
@@ -85,9 +85,9 @@ The async response streaming methods are:
 - `Response.aiter_raw()`- For streaming the raw response bytes, without applying content decoding.
 - `Response.aclose()`- For closing the response. You don't usually need this, since- `.stream`block closes the response automatically on exit.
 
-For situations when context block usage is not practical, it is possible to enter "manual mode" by sending a `Request` instance using `client.send(..., stream=True)`.
+For situations when context block usage is not practical, it is possible to enter "manual mode" by sending a [ Request instance](../advanced/clients/#request-instances) using 
 
-Example in the context of forwarding the response to a streaming web endpoint with Starlette:
+`client.send(..., stream=True)`.Example in the context of forwarding the response to a streaming web endpoint with [Starlette](https://www.starlette.io):
 
 ```
 import httpx
@@ -130,9 +130,10 @@ HTTPX supports either `asyncio` or `trio` as an async environment.
 
 It will auto-detect which of those two to use as the backend for socket operations and concurrency primitives.
 
-### AsyncIO
+[AsyncIO](https://docs.python.org/3/library/asyncio.html)
 
-AsyncIO is Python's built-in library for writing concurrent code with the async/await syntax.
+AsyncIO is Python's [built-in library](https://docs.python.org/3/library/asyncio.html)
+for writing concurrent code with the async/await syntax.
 
 ```
 import asyncio
@@ -143,9 +144,10 @@ async def main():
         print(response)
 asyncio.run(main())
 ```
-### Trio
+[Trio](https://github.com/python-trio/trio)
 
-Trio is an alternative async library, designed around the the principles of structured concurrency.
+Trio is [an alternative async library](https://trio.readthedocs.io/en/stable/),
+designed around the [the principles of structured concurrency](https://en.wikipedia.org/wiki/Structured_concurrency).
 
 ```
 import httpx
@@ -160,9 +162,9 @@ Important
 
 The `trio` package must be installed to use the Trio backend.
 
-### AnyIO
+[AnyIO](https://github.com/agronholm/anyio)
 
-AnyIO is an asynchronous networking and concurrency library that works on top of either `asyncio` or `trio`. It blends in with native libraries of your chosen backend (defaults to `asyncio`).
+AnyIO is an [asynchronous networking and concurrency library](https://anyio.readthedocs.io/) that works on top of either `asyncio` or `trio`. It blends in with native libraries of your chosen backend (defaults to `asyncio`).
 
 ```
 import httpx
@@ -175,7 +177,7 @@ anyio.run(main, backend='trio')
 ```
 ## Calling into Python Web Apps
 
-For details on calling directly into ASGI applications, see the `ASGITransport` docs.
+For details on calling directly into ASGI applications, see [the  ASGITransport docs](../advanced/transports#asgitransport).
 
 # Citations
 

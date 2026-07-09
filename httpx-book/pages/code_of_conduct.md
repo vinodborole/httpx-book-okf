@@ -3,12 +3,12 @@ type: Web Page
 title: Code of Conduct - HTTPX
 description: A next-generation HTTP client for Python.
 resource: https://www.python-httpx.org/code_of_conduct
-timestamp: '2026-07-07T08:53:45.702113+00:00'
+timestamp: '2026-07-09T12:16:45.224822+00:00'
 ---
 
 # Code of Conduct
 
-We expect contributors to our projects and online spaces to follow the Python Software Foundation’s Code of Conduct.
+We expect contributors to our projects and online spaces to follow [the Python Software Foundation’s Code of Conduct](https://www.python.org/psf/conduct/).
 
 The Python community is made up of members from around the globe with a diverse set of skills, personalities, and experiences. It is through these differences that our community experiences great successes and continued growth. When you're working with members of the community, this Code of Conduct will help steer your interactions and keep Python a positive, successful, and growing community.
 
@@ -61,7 +61,7 @@ If you need to raise a Code of Conduct report, you may do so privately by email 
 
 Reports will be treated confidentially.
 
-Alternately you may make a report to the Python Software Foundation.
+Alternately you may [make a report to the Python Software Foundation](https://www.python.org/psf/conduct/reporting/).
 
 # Citations
 

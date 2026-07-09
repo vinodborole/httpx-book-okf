@@ -2,7 +2,7 @@
   "generator": "okf-kit",
   "okf_version": "0.1",
   "root_url": "https://www.python-httpx.org/",
-  "updated_at": "2026-07-07T08:53:45.709194+00:00",
+  "updated_at": "2026-07-09T12:16:45.241645+00:00",
   "config": {
     "max_depth": 3,
     "max_pages": 60,
@@ -16,13 +16,13 @@
       "path": "pages/advanced/authentication.md",
       "url": "https://www.python-httpx.org/advanced/authentication",
       "title": "Authentication - HTTPX",
-      "hash": "e3b1389702c8db8fbd7e1bab041dba386b2dfba15123ac10ae853a410075805b"
+      "hash": "a572168887ace0455aa4ed380e3cd3c3a623f98a5500956e8a55f5fb0fd12d76"
     },
     {
       "path": "pages/advanced/clients.md",
       "url": "https://www.python-httpx.org/advanced/clients",
       "title": "Clients - HTTPX",
-      "hash": "e7b4ab5d3bb9fb0d967384ec30e0a2cf49aca78ce1f8d4a8e035a9c91aae6f32"
+      "hash": "68070a76321ccc2056343933d755d598c73b3dd985ba15c61fdc4ecd233b0967"
     },
     {
       "path": "pages/advanced/event-hooks.md",
@@ -34,13 +34,13 @@
       "path": "pages/advanced/extensions.md",
       "url": "https://www.python-httpx.org/advanced/extensions",
       "title": "Extensions - HTTPX",
-      "hash": "fbe643dcc479047664267ef3e8fce6ad1890e4111d3c58e950e7787eab3e9d02"
+      "hash": "6c6d17628c3b9287e76bc76d5f83604f002a65d996555319712296a4673123aa"
     },
     {
       "path": "pages/advanced/proxies.md",
       "url": "https://www.python-httpx.org/advanced/proxies",
       "title": "Proxies - HTTPX",
-      "hash": "2e3070917e4c3309e8e4bcbd488fe94c57ba647002370d1c1a65b109b867efa8"
+      "hash": "5e3cb3b94a9c4922f5e56d38c28c576741167df66048d85fbc744d1a08074cef"
     },
     {
       "path": "pages/advanced/resource-limits.md",
@@ -52,13 +52,13 @@
       "path": "pages/advanced/ssl.md",
       "url": "https://www.python-httpx.org/advanced/ssl",
       "title": "SSL - HTTPX",
-      "hash": "35a1729f46eca3c8c37148214ef32d0f132cb68347ab85a126f7dc13f891b00e"
+      "hash": "548eba7565756275fa8f3ba0fff204d10cbe6de6283834f38b2da4b8738dfb99"
     },
     {
       "path": "pages/advanced/text-encodings.md",
       "url": "https://www.python-httpx.org/advanced/text-encodings",
       "title": "Text Encodings - HTTPX",
-      "hash": "e28b8e1eec351fbab0cd7a09cca05ce678c41b1e0015eab77c1aa33e23514c8c"
+      "hash": "3148b024d63b0f90fa4123f34926db2cd9aa284fa8e7239399182e7e913059cc"
     },
     {
       "path": "pages/advanced/timeouts.md",
@@ -70,61 +70,61 @@
       "path": "pages/advanced/transports.md",
       "url": "https://www.python-httpx.org/advanced/transports",
       "title": "Transports - HTTPX",
-      "hash": "ad7501119b1818549593e0af2678320923630ad55cd806f95f03beec705ccb28"
+      "hash": "e5993c299808e68323d62e484b26c843e943cc9104f8a2df622eb3a5c9873708"
     },
     {
       "path": "pages/api.md",
       "url": "https://www.python-httpx.org/api",
       "title": "Developer Interface - HTTPX",
-      "hash": "c6cc8e79c404e2dbb742860ff9bfae587b7208ceeb50e38828353e83ec38d3d6"
+      "hash": "eae17bfb1039a96ec3655793c763773a189b8e3bbb5e54c8e44513b173a64b32"
     },
     {
       "path": "pages/async.md",
       "url": "https://www.python-httpx.org/async",
       "title": "Async Support - HTTPX",
-      "hash": "6bc705b2a95eea027af405269c7449fd39690f4d7003227ceacff9493e4ff6a5"
+      "hash": "a05fb78cce18d5ca6c152b3c03453347908f022e1a30bdbc0b73fbac3d2a62f5"
     },
     {
       "path": "pages/code_of_conduct.md",
       "url": "https://www.python-httpx.org/code_of_conduct",
       "title": "Code of Conduct - HTTPX",
-      "hash": "76864f04119f019917b7bb4666d2466ce36f6caf4ffd1985ee8a26d5e8e10784"
+      "hash": "216258fee39484a4af050f2f57a1c0f9add3a582fabeb22f2e8d638ad0e6f99c"
     },
     {
       "path": "pages/compatibility.md",
       "url": "https://www.python-httpx.org/compatibility",
       "title": "Requests Compatibility - HTTPX",
-      "hash": "6dd1befdc14810b4dbc99c6c348efea2109db18331452c2b1d5c676ba58e15a7"
+      "hash": "96b6cd205dce9a719bb20e06e0da40fe4e5f0d48cbb37067a489d1f654e81ddf"
     },
     {
       "path": "pages/contributing.md",
       "url": "https://www.python-httpx.org/contributing",
       "title": "Contributing - HTTPX",
-      "hash": "e9613be6697a63ab7192cb4dec20465c8ca927970c062d41397e256ca518f1ef"
+      "hash": "5fbc592765ba6a76d07987b79cc9bd8c4164012d93e4e6a16adc25734435d330"
     },
     {
       "path": "pages/environment_variables.md",
       "url": "https://www.python-httpx.org/environment_variables",
       "title": "Environment Variables - HTTPX",
-      "hash": "5b33dabb652275982322b8e5c5e4e47b2a9a7db105408a960f6786322444b016"
+      "hash": "f2914083403d19181bd9c7be812c86622656f4ae77621834aea0746b156564af"
     },
     {
       "path": "pages/exceptions.md",
       "url": "https://www.python-httpx.org/exceptions",
       "title": "Exceptions - HTTPX",
-      "hash": "9d439bc07fe2671191cc4d60c13314b475a66583d2dedb8ecbd7633d77083dc9"
+      "hash": "f281356c9a28672555d69b01deee0e0fb86c42ec08a1e87cd5a8fc09b23e75d8"
     },
     {
       "path": "pages/home.md",
       "url": "https://www.python-httpx.org/",
       "title": "HTTPX",
-      "hash": "085f5e0d5ee8791704964b75b6c564b2669fd9158c622cf0e1a316a58ea3832e"
+      "hash": "ee74894159cb03ea032e6a401dce1b834db30a7cdbba76776b5a31c2208587db"
     },
     {
       "path": "pages/http2.md",
       "url": "https://www.python-httpx.org/http2",
       "title": "HTTP/2 Support - HTTPX",
-      "hash": "b7c93bbd1885aba27f663800e842931ba8aadcead2dcf96ef95719b76e65f11e"
+      "hash": "dd72adda30240fe947014d6c907d0433b37039bf9a357088db88a06ce368565b"
     },
     {
       "path": "pages/logging.md",
@@ -136,19 +136,19 @@
       "path": "pages/quickstart.md",
       "url": "https://www.python-httpx.org/quickstart",
       "title": "QuickStart - HTTPX",
-      "hash": "09ac3f38d1b40e78cf987c27c791592c4ab10c8c8b2f105bfe44d4f93e04cb9f"
+      "hash": "102dc0c1ab6e73a38fc541028daf8da1d24b48149621792a8548a0d6189c8d28"
     },
     {
       "path": "pages/third_party_packages.md",
       "url": "https://www.python-httpx.org/third_party_packages",
       "title": "Third Party Packages - HTTPX",
-      "hash": "2a7b76b0dc07668cf00241528cfdc8d21f5a8c416bde591f058b645c54a85566"
+      "hash": "b931aa785cfaf1634d26a34c442bbf630cade35377c23097694f5e5a807e96d1"
     },
     {
       "path": "pages/troubleshooting.md",
       "url": "https://www.python-httpx.org/troubleshooting",
       "title": "Troubleshooting - HTTPX",
-      "hash": "2762f7f91a883deb8b6cfdb6b1850f17aa3e70d9956889f62be3ca2535525292"
+      "hash": "2c2557106e40447f6ca5184101ab857b8166e30ca24df9af45a77c99ada990b5"
     }
   ],
   "edges": [
@@ -300,5 +300,12 @@
       "pages/troubleshooting.md",
       "pages/advanced/proxies.md"
     ]
-  ]
+  ],
+  "last_sync": {
+    "synced_at": "2026-07-09T12:16:45.235751+00:00",
+    "added": 0,
+    "changed": 19,
+    "removed": 0,
+    "pages": 23
+  }
 }
