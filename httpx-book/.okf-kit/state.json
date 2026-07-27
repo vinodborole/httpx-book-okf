@@ -2,7 +2,7 @@
   "generator": "okf-kit",
   "okf_version": "0.1",
   "root_url": "https://www.python-httpx.org/",
-  "updated_at": "2026-07-20T08:48:45.547148+00:00",
+  "updated_at": "2026-07-27T09:39:57.352180+00:00",
   "config": {
     "max_depth": 3,
     "max_pages": 60,
@@ -302,7 +302,7 @@
     ]
   ],
   "last_sync": {
-    "synced_at": "2026-07-20T08:48:45.540646+00:00",
+    "synced_at": "2026-07-27T09:39:57.346767+00:00",
     "added": 0,
     "changed": 0,
     "removed": 0,
