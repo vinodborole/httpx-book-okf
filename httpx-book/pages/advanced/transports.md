@@ -3,7 +3,7 @@ type: Web Page
 title: Transports - HTTPX
 description: A next-generation HTTP client for Python.
 resource: https://www.python-httpx.org/advanced/transports
-timestamp: '2026-07-09T12:16:45.224822+00:00'
+timestamp: '2026-08-03T09:33:05.936318+00:00'
 ---
 
 # Transports
@@ -48,7 +48,7 @@ You can configure an `httpx` client to call directly into a Python web applicati
 
 This is particularly useful for two main use-cases:
 
-- Using `httpx`as a client inside test cases.
+- Using `httpx` as a client inside test cases.
 - Mocking out external services during tests or in dev or staging environments.
 
 ### Example
@@ -72,9 +72,9 @@ with httpx.Client(transport=transport, base_url="http://testserver") as client:
 
 For some more complex cases you might need to customize the WSGI transport. This allows you to:
 
-- Inspect 500 error responses rather than raise exceptions by setting `raise_app_exceptions=False`.
-- Mount the WSGI application at a subpath by setting `script_name`(WSGI).
-- Use a given client address for requests by setting `remote_addr`(WSGI).
+- Inspect 500 error responses rather than raise exceptions by setting `raise_app_exceptions=False` .
+- Mount the WSGI application at a subpath by setting `script_name` (WSGI).
+- Use a given client address for requests by setting `remote_addr` (WSGI).
 
 For example:
 
@@ -90,7 +90,7 @@ You can configure an `httpx` client to call directly into an async Python web ap
 
 This is particularly useful for two main use-cases:
 
-- Using `httpx`as a client inside test cases.
+- Using `httpx` as a client inside test cases.
 - Mocking out external services during tests or in dev or staging environments.
 
 ### Example
@@ -118,9 +118,9 @@ async with httpx.AsyncClient(transport=transport, base_url="http://testserver") 
 
 For some more complex cases you might need to customise the ASGI transport. This allows you to:
 
-- Inspect 500 error responses rather than raise exceptions by setting `raise_app_exceptions=False`.
-- Mount the ASGI application at a subpath by setting `root_path`.
-- Use a given client address for requests by setting `client`.
+- Inspect 500 error responses rather than raise exceptions by setting `raise_app_exceptions=False` .
+- Mount the ASGI application at a subpath by setting `root_path` .
+- Use a given client address for requests by setting `client` .
 
 For example:
 
@@ -405,12 +405,8 @@ mounts = {
 
 There are also environment variables that can be used to control the dictionary of the client mounts. They can be used to configure HTTP proxying for clients.
 
-See documentation on [ HTTP_PROXY, HTTPS_PROXY, ALL_PROXY](../../environment_variables/#http_proxy-https_proxy-all_proxy)
-and 
-
-[for more information.](../../environment_variables/#no_proxy)
-
-`NO_PROXY`
+See documentation on [`HTTP_PROXY`, `HTTPS_PROXY`, `ALL_PROXY`](../../environment_variables/#http_proxy-https_proxy-all_proxy)
+and [`NO_PROXY`](../../environment_variables/#no_proxy) for more information.
 
 # Citations
 

@@ -3,7 +3,7 @@ type: Web Page
 title: Proxies - HTTPX
 description: A next-generation HTTP client for Python.
 resource: https://www.python-httpx.org/advanced/proxies
-timestamp: '2026-07-09T12:16:45.224822+00:00'
+timestamp: '2026-08-03T09:33:05.936318+00:00'
 ---
 
 # Proxies
@@ -12,7 +12,8 @@ HTTPX supports setting up [HTTP proxies](https://en.wikipedia.org/wiki/Proxy_ser
 
 *Diagram of how a proxy works (source: Wikipedia). The left hand side "Internet" blob may be your HTTPX client requesting*
 
-`example.com` through a proxy.## HTTP Proxies
+`example.com` through a proxy.
+## HTTP Proxies
 
 To route all traffic (HTTP and HTTPS) to a proxy located at `http://localhost:8030`, pass the proxy URL to the client...
 
@@ -58,13 +59,13 @@ This section describes **advanced** proxy concepts and functionality.
 
 In general, the flow for making an HTTP request through a proxy is as follows:
 
-- The client connects to the proxy (initial connection request).
-- The proxy transfers data to the server on your behalf.
+1. The client connects to the proxy (initial connection request).
+2. The proxy transfers data to the server on your behalf.
 
 How exactly step 2/ is performed depends on which of two proxying mechanisms is used:
 
-- **Forwarding**: the proxy makes the request for you, and sends back the response it obtained from the server.
-- **Tunnelling**: the proxy establishes a TCP connection to the server on your behalf, and the client reuses this connection to send the request and receive the response. This is known as an- [HTTP Tunnel](https://en.wikipedia.org/wiki/HTTP_tunnel). This mechanism is how you can access websites that use HTTPS from an HTTP proxy (the client "upgrades" the connection to HTTPS by performing the TLS handshake with the server over the TCP connection provided by the proxy).
+- **Forwarding** : the proxy makes the request for you, and sends back the response it obtained from the server.
+- **Tunnelling** : the proxy establishes a TCP connection to the server on your behalf, and the client reuses this connection to send the request and receive the response. This is known as an[HTTP Tunnel](https://en.wikipedia.org/wiki/HTTP_tunnel) . This mechanism is how you can access websites that use HTTPS from an HTTP proxy (the client "upgrades" the connection to HTTPS by performing the TLS handshake with the server over the TCP connection provided by the proxy).
 
 ### Troubleshooting proxies
 

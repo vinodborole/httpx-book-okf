@@ -3,7 +3,7 @@ type: Web Page
 title: Exceptions - HTTPX
 description: A next-generation HTTP client for Python.
 resource: https://www.python-httpx.org/exceptions
-timestamp: '2026-07-09T12:16:45.224822+00:00'
+timestamp: '2026-08-03T09:33:05.936318+00:00'
 ---
 
 # Exceptions
@@ -14,43 +14,44 @@ For an overview of how to work with HTTPX exceptions, see [Exceptions (Quickstar
 
 ## The exception hierarchy
 
-- HTTPError- RequestError- TransportError- TimeoutException- ConnectTimeout
-- ReadTimeout
-- WriteTimeout
-- PoolTimeout
- 
-- NetworkError- ConnectError
-- ReadError
-- WriteError
-- CloseError
- 
-- ProtocolError- LocalProtocolError
-- RemoteProtocolError
- 
-- ProxyError
-- UnsupportedProtocol
- 
-- TimeoutException
-- DecodingError
-- TooManyRedirects
- 
-- TransportError
-- HTTPStatusError
- 
+- HTTPError
+  - RequestError
+    - TransportError
+      - TimeoutException
+        - ConnectTimeout
+        - ReadTimeout
+        - WriteTimeout
+        - PoolTimeout
+      - NetworkError
+        - ConnectError
+        - ReadError
+        - WriteError
+        - CloseError
+      - ProtocolError
+        - LocalProtocolError
+        - RemoteProtocolError
+      - ProxyError
+      - UnsupportedProtocol
+    - TimeoutException
+    - DecodingError
+    - TooManyRedirects
+  - TransportError
+  - HTTPStatusError
 - RequestError
 - InvalidURL
 - CookieConflict
-- StreamError- StreamConsumed
-- ResponseNotRead
-- RequestNotRead
-- StreamClosed
- 
+- StreamError
+  - StreamConsumed
+  - ResponseNotRead
+  - RequestNotRead
+  - StreamClosed
 
 ## Exception classes
 
 *class*
 
-`httpx.`**HTTPError**(*message*)
+`httpx.`**HTTPError**(
+*message*)
 
 Base class for `RequestError` and `HTTPStatusError`.
 
@@ -68,7 +69,8 @@ except httpx.HTTPError as exc:
 ```
 *class*
 
-`httpx.`**RequestError**(*message*,
+`httpx.`**RequestError**(
+*message*,
 
 ***,
 
@@ -78,7 +80,8 @@ Base class for all exceptions that may occur when issuing a `.request()`.
 
 *class*
 
-`httpx.`**TransportError**(*message*,
+`httpx.`**TransportError**(
+*message*,
 
 ***,
 
@@ -88,7 +91,8 @@ Base class for all exceptions that occur at the level of the Transport API.
 
 *class*
 
-`httpx.`**TimeoutException**(*message*,
+`httpx.`**TimeoutException**(
+*message*,
 
 ***,
 
@@ -100,7 +104,8 @@ An operation has timed out.
 
 *class*
 
-`httpx.`**ConnectTimeout**(*message*,
+`httpx.`**ConnectTimeout**(
+*message*,
 
 ***,
 
@@ -110,7 +115,8 @@ Timed out while connecting to the host.
 
 *class*
 
-`httpx.`**ReadTimeout**(*message*,
+`httpx.`**ReadTimeout**(
+*message*,
 
 ***,
 
@@ -120,7 +126,8 @@ Timed out while receiving data from the host.
 
 *class*
 
-`httpx.`**WriteTimeout**(*message*,
+`httpx.`**WriteTimeout**(
+*message*,
 
 ***,
 
@@ -130,7 +137,8 @@ Timed out while sending data to the host.
 
 *class*
 
-`httpx.`**PoolTimeout**(*message*,
+`httpx.`**PoolTimeout**(
+*message*,
 
 ***,
 
@@ -140,7 +148,8 @@ Timed out waiting to acquire a connection from the pool.
 
 *class*
 
-`httpx.`**NetworkError**(*message*,
+`httpx.`**NetworkError**(
+*message*,
 
 ***,
 
@@ -152,7 +161,8 @@ An error occurred while interacting with the network.
 
 *class*
 
-`httpx.`**ConnectError**(*message*,
+`httpx.`**ConnectError**(
+*message*,
 
 ***,
 
@@ -162,7 +172,8 @@ Failed to establish a connection.
 
 *class*
 
-`httpx.`**ReadError**(*message*,
+`httpx.`**ReadError**(
+*message*,
 
 ***,
 
@@ -172,7 +183,8 @@ Failed to receive data from the network.
 
 *class*
 
-`httpx.`**WriteError**(*message*,
+`httpx.`**WriteError**(
+*message*,
 
 ***,
 
@@ -182,7 +194,8 @@ Failed to send data through the network.
 
 *class*
 
-`httpx.`**CloseError**(*message*,
+`httpx.`**CloseError**(
+*message*,
 
 ***,
 
@@ -192,7 +205,8 @@ Failed to close a connection.
 
 *class*
 
-`httpx.`**ProtocolError**(*message*,
+`httpx.`**ProtocolError**(
+*message*,
 
 ***,
 
@@ -202,7 +216,8 @@ The protocol was violated.
 
 *class*
 
-`httpx.`**LocalProtocolError**(*message*,
+`httpx.`**LocalProtocolError**(
+*message*,
 
 ***,
 
@@ -216,7 +231,8 @@ using `client.send()`.
 
 *class*
 
-`httpx.`**RemoteProtocolError**(*message*,
+`httpx.`**RemoteProtocolError**(
+*message*,
 
 ***,
 
@@ -228,7 +244,8 @@ For example, returning malformed HTTP.
 
 *class*
 
-`httpx.`**ProxyError**(*message*,
+`httpx.`**ProxyError**(
+*message*,
 
 ***,
 
@@ -238,7 +255,8 @@ An error occurred while establishing a proxy connection.
 
 *class*
 
-`httpx.`**UnsupportedProtocol**(*message*,
+`httpx.`**UnsupportedProtocol**(
+*message*,
 
 ***,
 
@@ -250,7 +268,8 @@ For example issuing a request to `ftp://www.example.com`.
 
 *class*
 
-`httpx.`**DecodingError**(*message*,
+`httpx.`**DecodingError**(
+*message*,
 
 ***,
 
@@ -260,7 +279,8 @@ Decoding of the response failed, due to a malformed encoding.
 
 *class*
 
-`httpx.`**TooManyRedirects**(*message*,
+`httpx.`**TooManyRedirects**(
+*message*,
 
 ***,
 
@@ -270,7 +290,8 @@ Too many redirects.
 
 *class*
 
-`httpx.`**HTTPStatusError**(*message*,
+`httpx.`**HTTPStatusError**(
+*message*,
 
 ***,
 
@@ -284,13 +305,15 @@ May be raised when calling `response.raise_for_status()`
 
 *class*
 
-`httpx.`**InvalidURL**(*message*)
+`httpx.`**InvalidURL**(
+*message*)
 
 URL is improperly formed or cannot be parsed.
 
 *class*
 
-`httpx.`**CookieConflict**(*message*)
+`httpx.`**CookieConflict**(
+*message*)
 
 Attempted to lookup a cookie by name, but multiple cookies existed.
 
@@ -298,7 +321,8 @@ Can occur when calling `response.cookies.get(...)`.
 
 *class*
 
-`httpx.`**StreamError**(*message*)
+`httpx.`**StreamError**(
+*message*)
 
 The base class for stream exceptions.
 
@@ -306,19 +330,23 @@ The developer made an error in accessing the request stream in an invalid way.
 
 *class*
 
-`httpx.`**StreamConsumed**()Attempted to read or stream content, but the content has already been streamed.
+`httpx.`**StreamConsumed**()
+Attempted to read or stream content, but the content has already been streamed.
 
 *class*
 
-`httpx.`**StreamClosed**()Attempted to read or stream response content, but the request has been closed.
+`httpx.`**StreamClosed**()
+Attempted to read or stream response content, but the request has been closed.
 
 *class*
 
-`httpx.`**ResponseNotRead**()Attempted to access streaming response content, without having called `read()`.
+`httpx.`**ResponseNotRead**()
+Attempted to access streaming response content, without having called `read()`.
 
 *class*
 
-`httpx.`**RequestNotRead**()Attempted to access streaming request content, without having called `read()`.
+`httpx.`**RequestNotRead**()
+Attempted to access streaming request content, without having called `read()`.
 
 # Citations
 

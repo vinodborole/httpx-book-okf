@@ -3,7 +3,7 @@ type: Web Page
 title: SSL - HTTPX
 description: A next-generation HTTP client for Python.
 resource: https://www.python-httpx.org/advanced/ssl
-timestamp: '2026-07-09T12:16:45.224822+00:00'
+timestamp: '2026-08-03T09:33:05.936318+00:00'
 ---
 
 # SSL
@@ -40,7 +40,7 @@ import ssl
 ctx = ssl.create_default_context(cafile=certifi.where())
 client = httpx.Client(verify=ctx)
 ```
-Using [the  truststore package](https://truststore.readthedocs.io/) to support system certificate stores...
+Using [the `truststore` package](https://truststore.readthedocs.io/) to support system certificate stores...
 
 ```
 import ssl
@@ -63,7 +63,7 @@ client = httpx.Client(verify=ctx)
 
 Client side certificates allow a remote server to verify the client. They tend to be used within private organizations to authenticate requests to remote servers.
 
-You can specify client-side certificates, using the [ .load_cert_chain()](https://docs.python.org/3/library/ssl.html#ssl.SSLContext.load_cert_chain) API...
+You can specify client-side certificates, using the [`.load_cert_chain()`](https://docs.python.org/3/library/ssl.html#ssl.SSLContext.load_cert_chain) API...
 
 ```
 ctx = ssl.create_default_context()
@@ -80,9 +80,9 @@ When making requests to local servers, such as a development server running on `
 
 If you do need to make HTTPS connections to a local server, for example to test an HTTPS-only service, you will need to create and use your own certificates. Here's one way to do it...
 
-- Use [trustme](https://github.com/python-trio/trustme)to generate a pair of server key/cert files, and a client cert file.
-- Pass the server key/cert files when starting your local server. (This depends on the particular web server you're using. For example, [Uvicorn](https://www.uvicorn.org)provides the`--ssl-keyfile`and`--ssl-certfile`options.)
-- Configure `httpx`to use the certificates stored in`client.pem`.
+1. Use [trustme](https://github.com/python-trio/trustme) to generate a pair of server key/cert files, and a client cert file.
+2. Pass the server key/cert files when starting your local server. (This depends on the particular web server you're using. For example, [Uvicorn](https://www.uvicorn.org) provides the`--ssl-keyfile` and`--ssl-certfile` options.)
+3. Configure `httpx` to use the certificates stored in`client.pem` .
 
 ```
 ctx = ssl.create_default_context(cafile="client.pem")

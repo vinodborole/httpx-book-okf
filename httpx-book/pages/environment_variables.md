@@ -3,7 +3,7 @@ type: Web Page
 title: Environment Variables - HTTPX
 description: A next-generation HTTP client for Python.
 resource: https://www.python-httpx.org/environment_variables
-timestamp: '2026-07-09T12:16:45.224822+00:00'
+timestamp: '2026-08-03T09:33:05.936318+00:00'
 ---
 
 # Environment Variables
@@ -11,8 +11,8 @@ timestamp: '2026-07-09T12:16:45.224822+00:00'
 The HTTPX library can be configured via environment variables.
 Environment variables are used by default. To ignore environment variables, `trust_env` has to be set `False`. There are two ways to set `trust_env` to disable environment variables:
 
-- On the client via `httpx.Client(trust_env=False)`.
-- Using the top-level API, such as `httpx.get("<url>", trust_env=False)`.
+- On the client via `httpx.Client(trust_env=False)` .
+- Using the top-level API, such as `httpx.get("<url>", trust_env=False)` .
 
 Here is a list of environment variables that HTTPX recognizes and what function they serve:
 
@@ -22,7 +22,7 @@ The environment variables documented below are used as a convention by various H
 
 For more information on using proxies in HTTPX, see [HTTP Proxying](../advanced/proxies/#http-proxying).
 
-`HTTP_PROXY`, `HTTPS_PROXY`, `ALL_PROXY`
+### `HTTP_PROXY`, `HTTPS_PROXY`, `ALL_PROXY`
 
 Valid values: A URL to a proxy
 
@@ -35,7 +35,7 @@ python -c "import httpx; httpx.get('http://example.com')"
 # This request will be sent directly, as we set `trust_env=False`
 python -c "import httpx; httpx.get('http://example.com', trust_env=False)"
 ```
-`NO_PROXY`
+### `NO_PROXY`
 
 Valid values: a comma-separated list of hostnames/urls
 
@@ -50,7 +50,7 @@ python -c "import httpx; httpx.get('http://example.com')"
 python -c "import httpx; httpx.get('http://127.0.0.1:5000/my-api')"
 python -c "import httpx; httpx.get('https://www.python-httpx.org')"
 ```
-`SSL_CERT_FILE`
+## `SSL_CERT_FILE`
 
 Valid values: a filename
 
@@ -61,7 +61,7 @@ Example:
 ```
 SSL_CERT_FILE=/path/to/ca-certs/ca-bundle.crt python -c "import httpx; httpx.get('https://example.com')"
 ```
-`SSL_CERT_DIR`
+## `SSL_CERT_DIR`
 
 Valid values: a directory following an [OpenSSL specific layout](https://www.openssl.org/docs/manmaster/man3/SSL_CTX_load_verify_locations.html).
 

@@ -3,7 +3,7 @@ type: Web Page
 title: Clients - HTTPX
 description: A next-generation HTTP client for Python.
 resource: https://www.python-httpx.org/advanced/clients
-timestamp: '2026-07-09T12:16:45.224822+00:00'
+timestamp: '2026-08-03T09:33:05.936318+00:00'
 ---
 
 # Clients
@@ -37,7 +37,7 @@ This can bring **significant performance improvements** compared to using the to
 - Cookie persistence across requests.
 - Applying configuration across all outgoing requests.
 - Sending requests through HTTP proxies.
-- Using [HTTP/2](../../http2/).
+- Using [HTTP/2](../../http2/) .
 
 The other sections on this page go into further detail about what you can do with a `Client` instance.
 
@@ -143,18 +143,18 @@ For example, `base_url` allows you to prepend an URL to all outgoing requests:
 >>> r.request.url
 URL('http://httpbin.org/headers')
 ```
-For a list of all available client parameters, see the [ Client](../../api/#client) API reference.
+For a list of all available client parameters, see the [`Client`](../../api/#client) API reference.
 
 ## Request instances
 
-For maximum control on what gets sent over the wire, HTTPX supports building explicit [ Request](../../api/#request) instances:
+For maximum control on what gets sent over the wire, HTTPX supports building explicit [`Request`](../../api/#request) instances:
 
 ```
 request = httpx.Request("GET", "https://example.com")
 ```
-To dispatch a `Request` instance across to the network, create a [ Client instance](#client-instances) and use 
+To dispatch a `Request` instance across to the network, create a [`Client` instance](#client-instances) and use `.send()`:
 
-`.send()`:```
+```
 with httpx.Client() as client:
     response = client.send(request)
     ...
@@ -177,7 +177,7 @@ If you need to monitor download progress of large responses, you can use respons
 
 This interface is required for properly determining download progress, because the total number of bytes returned by `response.content` or `response.iter_content()` will not always correspond with the raw content length of the response if HTTP response compression is being used.
 
-For example, showing a progress bar using the [ tqdm](https://github.com/tqdm/tqdm) library while a response is being downloaded could be done like this…
+For example, showing a progress bar using the [`tqdm`](https://github.com/tqdm/tqdm) library while a response is being downloaded could be done like this…
 
 ```
 import tempfile
@@ -194,7 +194,7 @@ with tempfile.NamedTemporaryFile() as download_file:
                 progress.update(response.num_bytes_downloaded - num_bytes_downloaded)
                 num_bytes_downloaded = response.num_bytes_downloaded
 ```
-Or an alternate example, this time using the [ rich](https://github.com/willmcgugan/rich) library…
+Or an alternate example, this time using the [`rich`](https://github.com/willmcgugan/rich) library…
 
 ```
 import tempfile
@@ -219,7 +219,7 @@ with tempfile.NamedTemporaryFile() as download_file:
 
 If you need to monitor upload progress of large responses, you can use request content generator streaming.
 
-For example, showing a progress bar using the [ tqdm](https://github.com/tqdm/tqdm) library.
+For example, showing a progress bar using the [`tqdm`](https://github.com/tqdm/tqdm) library.
 
 ```
 import io
@@ -260,10 +260,13 @@ name of the payloads as keys and either tuple of elements or a file-like object 
 ```
 More specifically, if a tuple is used as a value, it must have between 2 and 3 elements:
 
-- The first element is an optional file name which can be set to `None`.
+- The first element is an optional file name which can be set to `None` .
 - The second element may be a file-like object or a string which will be automatically encoded in UTF-8.
 - An optional third element can be used to specify the
-[MIME type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_Types)of the file being uploaded. If not specified HTTPX will attempt to guess the MIME type based on the file name, with unknown file extensions defaulting to "application/octet-stream". If the file name is explicitly set to`None`then HTTPX will not include a content-type MIME header field.
+[MIME type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_Types) of the file being uploaded. If not specified HTTPX will attempt to guess the MIME type based
+on the file name, with unknown file extensions defaulting to "application/octet-stream".
+If the file name is explicitly set to`None` then HTTPX will not include a content-type
+MIME header field.
 
 ```
 >>> files = {'upload-file': (None, 'text content', 'text/plain')}

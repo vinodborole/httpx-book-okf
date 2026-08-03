@@ -3,7 +3,7 @@ type: Web Page
 title: Async Support - HTTPX
 description: A next-generation HTTP client for Python.
 resource: https://www.python-httpx.org/async
-timestamp: '2026-07-09T12:16:45.224822+00:00'
+timestamp: '2026-08-03T09:33:05.936318+00:00'
 ---
 
 # Async Support
@@ -78,16 +78,16 @@ The `AsyncClient.stream(method, url, ...)` method is an async context block.
 ```
 The async response streaming methods are:
 
-- `Response.aread()`- For conditionally reading a response inside a stream block.
-- `Response.aiter_bytes()`- For streaming the response content as bytes.
-- `Response.aiter_text()`- For streaming the response content as text.
-- `Response.aiter_lines()`- For streaming the response content as lines of text.
-- `Response.aiter_raw()`- For streaming the raw response bytes, without applying content decoding.
-- `Response.aclose()`- For closing the response. You don't usually need this, since- `.stream`block closes the response automatically on exit.
+- `Response.aread()` - For conditionally reading a response inside a stream block.
+- `Response.aiter_bytes()` - For streaming the response content as bytes.
+- `Response.aiter_text()` - For streaming the response content as text.
+- `Response.aiter_lines()` - For streaming the response content as lines of text.
+- `Response.aiter_raw()` - For streaming the raw response bytes, without applying content decoding.
+- `Response.aclose()` - For closing the response. You don't usually need this, since`.stream` block closes the response automatically on exit.
 
-For situations when context block usage is not practical, it is possible to enter "manual mode" by sending a [ Request instance](../advanced/clients/#request-instances) using 
+For situations when context block usage is not practical, it is possible to enter "manual mode" by sending a [`Request` instance](../advanced/clients/#request-instances) using `client.send(..., stream=True)`.
 
-`client.send(..., stream=True)`.Example in the context of forwarding the response to a streaming web endpoint with [Starlette](https://www.starlette.io):
+Example in the context of forwarding the response to a streaming web endpoint with [Starlette](https://www.starlette.io):
 
 ```
 import httpx
@@ -130,7 +130,7 @@ HTTPX supports either `asyncio` or `trio` as an async environment.
 
 It will auto-detect which of those two to use as the backend for socket operations and concurrency primitives.
 
-[AsyncIO](https://docs.python.org/3/library/asyncio.html)
+### [AsyncIO](https://docs.python.org/3/library/asyncio.html)
 
 AsyncIO is Python's [built-in library](https://docs.python.org/3/library/asyncio.html)
 for writing concurrent code with the async/await syntax.
@@ -144,7 +144,7 @@ async def main():
         print(response)
 asyncio.run(main())
 ```
-[Trio](https://github.com/python-trio/trio)
+### [Trio](https://github.com/python-trio/trio)
 
 Trio is [an alternative async library](https://trio.readthedocs.io/en/stable/),
 designed around the [the principles of structured concurrency](https://en.wikipedia.org/wiki/Structured_concurrency).
@@ -162,7 +162,7 @@ Important
 
 The `trio` package must be installed to use the Trio backend.
 
-[AnyIO](https://github.com/agronholm/anyio)
+### [AnyIO](https://github.com/agronholm/anyio)
 
 AnyIO is an [asynchronous networking and concurrency library](https://anyio.readthedocs.io/) that works on top of either `asyncio` or `trio`. It blends in with native libraries of your chosen backend (defaults to `asyncio`).
 
@@ -177,7 +177,7 @@ anyio.run(main, backend='trio')
 ```
 ## Calling into Python Web Apps
 
-For details on calling directly into ASGI applications, see [the  ASGITransport docs](../advanced/transports#asgitransport).
+For details on calling directly into ASGI applications, see [the `ASGITransport` docs](../advanced/transports#asgitransport).
 
 # Citations
 

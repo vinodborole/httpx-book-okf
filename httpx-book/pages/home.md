@@ -3,7 +3,7 @@ type: Web Page
 title: HTTPX
 description: A next-generation HTTP client for Python.
 resource: https://www.python-httpx.org/
-timestamp: '2026-07-09T12:16:45.224822+00:00'
+timestamp: '2026-08-03T09:33:05.936318+00:00'
 ---
 
 # HTTPX
@@ -43,10 +43,10 @@ Sending a request...
 
 HTTPX builds on the well-established usability of `requests`, and gives you:
 
-- A broadly [requests-compatible API](compatibility/).
-- Standard synchronous interface, but with [async support if you need it](async/).
-- HTTP/1.1 [and HTTP/2 support](http2/).
-- Ability to make requests directly to [WSGI applications](advanced/transports/#wsgi-transport)or[ASGI applications](advanced/transports/#asgi-transport).
+- A broadly [requests-compatible API](compatibility/) .
+- Standard synchronous interface, but with [async support if you need it](async/) .
+- HTTP/1.1 [and HTTP/2 support](http2/) .
+- Ability to make requests directly to [WSGI applications](advanced/transports/#wsgi-transport) or[ASGI applications](advanced/transports/#asgi-transport) .
 - Strict timeouts everywhere.
 - Fully type annotated.
 - 100% test coverage.
@@ -84,20 +84,20 @@ To find out about tools that integrate with HTTPX, see [Third Party Packages](th
 
 The HTTPX project relies on these excellent libraries:
 
-- `httpcore`- The underlying transport implementation for- `httpx`.
-- `h11`- HTTP/1.1 support.
-- `certifi`- SSL certificates.
-- `idna`- Internationalized domain name support.
-- `sniffio`- Async library autodetection.
+- `httpcore` - The underlying transport implementation for`httpx` .
+- `h11` - HTTP/1.1 support.
+- `certifi` - SSL certificates.
+- `idna` - Internationalized domain name support.
+- `sniffio` - Async library autodetection.
 
 As well as these optional installs:
 
-- `h2`- HTTP/2 support.- *(Optional, with*- `httpx[http2]`)
-- `socksio`- SOCKS proxy support.- *(Optional, with*- `httpx[socks]`)
-- `rich`- Rich terminal support.- *(Optional, with*- `httpx[cli]`)
-- `click`- Command line client support.- *(Optional, with*- `httpx[cli]`)
-- `brotli`or- `brotlicffi`- Decoding for "brotli" compressed responses.- *(Optional, with*- `httpx[brotli]`)
-- `zstandard`- Decoding for "zstd" compressed responses.- *(Optional, with*- `httpx[zstd]`)
+- `h2` - HTTP/2 support.*(Optional, with `httpx[http2]`)*
+- `socksio` - SOCKS proxy support.*(Optional, with `httpx[socks]`)*
+- `rich` - Rich terminal support.*(Optional, with `httpx[cli]`)*
+- `click` - Command line client support.*(Optional, with `httpx[cli]`)*
+- `brotli` or`brotlicffi` - Decoding for "brotli" compressed responses.*(Optional, with `httpx[brotli]`)*
+- `zstandard` - Decoding for "zstd" compressed responses.*(Optional, with `httpx[zstd]`)*
 
 A huge amount of credit is due to `requests` for the API layout that
 much of this work follows, as well as to `urllib3` for plenty of design

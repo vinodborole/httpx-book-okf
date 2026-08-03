@@ -3,7 +3,7 @@ type: Web Page
 title: Developer Interface - HTTPX
 description: A next-generation HTTP client for Python.
 resource: https://www.python-httpx.org/api
-timestamp: '2026-07-09T12:16:45.224822+00:00'
+timestamp: '2026-08-03T09:33:05.936318+00:00'
 ---
 
 # Developer Interface
@@ -17,7 +17,8 @@ or making a small number of requests. Using a `Client` will
 enable HTTP/2 and connection pooling for more efficient and
 long-lived connections.
 
-`httpx.`**request**(*method*,
+`httpx.`**request**(
+*method*,
 
 *url*,
 
@@ -53,21 +54,32 @@ Sends an HTTP request.
 
 **Parameters:**
 
-- **method**- HTTP method for the new- `Request`object:- `GET`,- `OPTIONS`,- `HEAD`,- `POST`,- `PUT`,- `PATCH`, or- `DELETE`.
-- **url**- URL for the new- `Request`object.
-- **params**-- *(optional)*Query parameters to include in the URL, as a string, dictionary, or sequence of two-tuples.
-- **content**-- *(optional)*Binary content to include in the body of the request, as bytes or a byte iterator.
-- **data**-- *(optional)*Form data to include in the body of the request, as a dictionary.
-- **files**-- *(optional)*A dictionary of upload files to include in the body of the request.
-- **json**-- *(optional)*A JSON serializable object to include in the body of the request.
-- **headers**-- *(optional)*Dictionary of HTTP headers to include in the request.
-- **cookies**-- *(optional)*Dictionary of Cookie items to include in the request.
-- **auth**-- *(optional)*An authentication class to use when sending the request.
-- **proxy**-- *(optional)*A proxy URL where all the traffic should be routed.
-- **timeout**-- *(optional)*The timeout configuration to use when sending the request.
-- **follow_redirects**-- *(optional)*Enables or disables HTTP redirects.
-- **verify**-- *(optional)*Either- `True`to use an SSL context with the default CA bundle,- `False`to disable verification, or an instance of- `ssl.SSLContext`to use a custom context.
-- **trust_env**-- *(optional)*Enables or disables usage of environment variables for configuration.
+- **method** - HTTP method for the new`Request` object:`GET` ,`OPTIONS` ,`HEAD` ,`POST` ,`PUT` ,`PATCH` , or`DELETE` .
+- **url** - URL for the new`Request` object.
+- **params** -*(optional)* Query parameters to include in the URL, as a
+string, dictionary, or sequence of two-tuples.
+- **content** -*(optional)* Binary content to include in the body of the
+request, as bytes or a byte iterator.
+- **data** -*(optional)* Form data to include in the body of the request,
+as a dictionary.
+- **files** -*(optional)* A dictionary of upload files to include in the
+body of the request.
+- **json** -*(optional)* A JSON serializable object to include in the body
+of the request.
+- **headers** -*(optional)* Dictionary of HTTP headers to include in the
+request.
+- **cookies** -*(optional)* Dictionary of Cookie items to include in the
+request.
+- **auth** -*(optional)* An authentication class to use when sending the
+request.
+- **proxy** -*(optional)* A proxy URL where all the traffic should be routed.
+- **timeout** -*(optional)* The timeout configuration to use when sending
+the request.
+- **follow_redirects** -*(optional)* Enables or disables HTTP redirects.
+- **verify** -*(optional)* Either`True` to use an SSL context with the
+default CA bundle,`False` to disable verification, or an instance of`ssl.SSLContext` to use a custom context.
+- **trust_env** -*(optional)* Enables or disables usage of environment
+variables for configuration.
 
 **Returns:** `Response`
 
@@ -79,7 +91,8 @@ Usage:
 >>> response
 <Response [200 OK]>
 ```
-`httpx.`**get**(*url*,
+`httpx.`**get**(
+*url*,
 
 ***,
 
@@ -108,7 +121,8 @@ Sends a `GET` request.
 Note that the `data`, `files`, `json` and `content` parameters are not available
 on this function, as `GET` requests should not include a request body.
 
-`httpx.`**options**(*url*,
+`httpx.`**options**(
+*url*,
 
 ***,
 
@@ -137,7 +151,8 @@ Sends an `OPTIONS` request.
 Note that the `data`, `files`, `json` and `content` parameters are not available
 on this function, as `OPTIONS` requests should not include a request body.
 
-`httpx.`**head**(*url*,
+`httpx.`**head**(
+*url*,
 
 ***,
 
@@ -166,7 +181,8 @@ Sends a `HEAD` request.
 Note that the `data`, `files`, `json` and `content` parameters are not available
 on this function, as `HEAD` requests should not include a request body.
 
-`httpx.`**post**(*url*,
+`httpx.`**post**(
+*url*,
 
 ***,
 
@@ -200,7 +216,8 @@ Sends a `POST` request.
 
 **Parameters**: See `httpx.request`.
 
-`httpx.`**put**(*url*,
+`httpx.`**put**(
+*url*,
 
 ***,
 
@@ -234,7 +251,8 @@ Sends a `PUT` request.
 
 **Parameters**: See `httpx.request`.
 
-`httpx.`**patch**(*url*,
+`httpx.`**patch**(
+*url*,
 
 ***,
 
@@ -268,7 +286,8 @@ Sends a `PATCH` request.
 
 **Parameters**: See `httpx.request`.
 
-`httpx.`**delete**(*url*,
+`httpx.`**delete**(
+*url*,
 
 ***,
 
@@ -297,7 +316,8 @@ Sends a `DELETE` request.
 Note that the `data`, `files`, `json` and `content` parameters are not available
 on this function, as `DELETE` requests should not include a request body.
 
-`httpx.`**stream**(*method*,
+`httpx.`**stream**(
+*method*,
 
 *url*,
 
@@ -336,11 +356,12 @@ instead of loading it into memory at once.
 
 See also: [Streaming Responses](/quickstart#streaming-responses)
 
-`Client`
+## `Client`
 
 *class*
 
-`httpx.`**Client**(***,
+`httpx.`**Client**(
+***,
 
 *auth=None*,
 
@@ -392,32 +413,50 @@ Usage:
 ```
 **Parameters:**
 
-- **auth**-- *(optional)*An authentication class to use when sending requests.
-- **params**-- *(optional)*Query parameters to include in request URLs, as a string, dictionary, or sequence of two-tuples.
-- **headers**-- *(optional)*Dictionary of HTTP headers to include when sending requests.
-- **cookies**-- *(optional)*Dictionary of Cookie items to include when sending requests.
-- **verify**-- *(optional)*Either- `True`to use an SSL context with the default CA bundle,- `False`to disable verification, or an instance of- `ssl.SSLContext`to use a custom context.
-- **http2**-- *(optional)*A boolean indicating if HTTP/2 support should be enabled. Defaults to- `False`.
-- **proxy**-- *(optional)*A proxy URL where all the traffic should be routed.
-- **timeout**-- *(optional)*The timeout configuration to use when sending requests.
-- **limits**-- *(optional)*The limits configuration to use.
-- **max_redirects**-- *(optional)*The maximum number of redirect responses that should be followed.
-- **base_url**-- *(optional)*A URL to use as the base when building request URLs.
-- **transport**-- *(optional)*A transport class to use for sending requests over the network.
-- **trust_env**-- *(optional)*Enables or disables usage of environment variables for configuration.
-- **default_encoding**-- *(optional)*The default encoding to use for decoding response text, if no charset information is included in a response Content-Type header. Set to a callable for automatic character set detection. Default: "utf-8".
+- **auth** -*(optional)* An authentication class to use when sending
+requests.
+- **params** -*(optional)* Query parameters to include in request URLs, as
+a string, dictionary, or sequence of two-tuples.
+- **headers** -*(optional)* Dictionary of HTTP headers to include when
+sending requests.
+- **cookies** -*(optional)* Dictionary of Cookie items to include when
+sending requests.
+- **verify** -*(optional)* Either`True` to use an SSL context with the
+default CA bundle,`False` to disable verification, or an instance of`ssl.SSLContext` to use a custom context.
+- **http2** -*(optional)* A boolean indicating if HTTP/2 support should be
+enabled. Defaults to`False` .
+- **proxy** -*(optional)* A proxy URL where all the traffic should be routed.
+- **timeout** -*(optional)* The timeout configuration to use when sending
+requests.
+- **limits** -*(optional)* The limits configuration to use.
+- **max_redirects** -*(optional)* The maximum number of redirect responses
+that should be followed.
+- **base_url** -*(optional)* A URL to use as the base when building
+request URLs.
+- **transport** -*(optional)* A transport class to use for sending requests
+over the network.
+- **trust_env** -*(optional)* Enables or disables usage of environment
+variables for configuration.
+- **default_encoding** -*(optional)* The default encoding to use for decoding
+response text, if no charset information is included in a response Content-Type
+header. Set to a callable for automatic character set detection. Default: "utf-8".
 
-**headers**HTTP headers to include when sending requests.
+**headers**
+HTTP headers to include when sending requests.
 
-**cookies**Cookie values to include when sending requests.
+**cookies**
+Cookie values to include when sending requests.
 
-**params**Query parameters to include in the URL when sending requests.
+**params**
+Query parameters to include in the URL when sending requests.
 
-**auth**Authentication class used when none is passed at the request-level.
+**auth**
+Authentication class used when none is passed at the request-level.
 
 See also [Authentication](/quickstart/#authentication).
 
-**request***self*,
+**request**
+*self*,
 
 *method*,
 
@@ -459,7 +498,8 @@ See `Client.build_request()`, `Client.send()` and
 [Merging of configuration](/advanced/clients/#merging-of-configuration) for how the various parameters
 are merged with client-level configuration.
 
-**get***self*,
+**get**
+*self*,
 
 *url*,
 
@@ -483,7 +523,8 @@ Send a `GET` request.
 
 **Parameters**: See `httpx.request`.
 
-**head***self*,
+**head**
+*self*,
 
 *url*,
 
@@ -507,7 +548,8 @@ Send a `HEAD` request.
 
 **Parameters**: See `httpx.request`.
 
-**options***self*,
+**options**
+*self*,
 
 *url*,
 
@@ -531,7 +573,8 @@ Send an `OPTIONS` request.
 
 **Parameters**: See `httpx.request`.
 
-**post***self*,
+**post**
+*self*,
 
 *url*,
 
@@ -563,7 +606,8 @@ Send a `POST` request.
 
 **Parameters**: See `httpx.request`.
 
-**put***self*,
+**put**
+*self*,
 
 *url*,
 
@@ -595,7 +639,8 @@ Send a `PUT` request.
 
 **Parameters**: See `httpx.request`.
 
-**patch***self*,
+**patch**
+*self*,
 
 *url*,
 
@@ -627,7 +672,8 @@ Send a `PATCH` request.
 
 **Parameters**: See `httpx.request`.
 
-**delete***self*,
+**delete**
+*self*,
 
 *url*,
 
@@ -651,7 +697,8 @@ Send a `DELETE` request.
 
 **Parameters**: See `httpx.request`.
 
-**stream***self*,
+**stream**
+*self*,
 
 *method*,
 
@@ -688,7 +735,8 @@ instead of loading it into memory at once.
 
 See also: [Streaming Responses](/quickstart#streaming-responses)
 
-**build_request***self*,
+**build_request**
+*self*,
 
 *method*,
 
@@ -716,12 +764,14 @@ See also: [Streaming Responses](/quickstart#streaming-responses)
 
 Build and return a request instance.
 
-- The `params`,`headers`and`cookies`arguments are merged with any values set on the client.
-- The `url`argument is merged with any`base_url`set on the client.
+- The `params` ,`headers` and`cookies` arguments
+are merged with any values set on the client.
+- The `url` argument is merged with any`base_url` set on the client.
 
 See also: [Request instances](/advanced/clients/#request-instances)
 
-**send***self*,
+**send**
+*self*,
 
 *request*,
 
@@ -743,15 +793,17 @@ but passing an explicit `httpx.Request()` is supported as well.
 
 See also: [Request instances](/advanced/clients/#request-instances)
 
-**close***self*)
+**close**
+*self*)
 
 Close transport and proxies.
 
-`AsyncClient`
+## `AsyncClient`
 
 *class*
 
-`httpx.`**AsyncClient**(***,
+`httpx.`**AsyncClient**(
+***,
 
 *auth=None*,
 
@@ -803,34 +855,52 @@ Usage:
 ```
 **Parameters:**
 
-- **auth**-- *(optional)*An authentication class to use when sending requests.
-- **params**-- *(optional)*Query parameters to include in request URLs, as a string, dictionary, or sequence of two-tuples.
-- **headers**-- *(optional)*Dictionary of HTTP headers to include when sending requests.
-- **cookies**-- *(optional)*Dictionary of Cookie items to include when sending requests.
-- **verify**-- *(optional)*Either- `True`to use an SSL context with the default CA bundle,- `False`to disable verification, or an instance of- `ssl.SSLContext`to use a custom context.
-- **http2**-- *(optional)*A boolean indicating if HTTP/2 support should be enabled. Defaults to- `False`.
-- **proxy**-- *(optional)*A proxy URL where all the traffic should be routed.
-- **timeout**-- *(optional)*The timeout configuration to use when sending requests.
-- **limits**-- *(optional)*The limits configuration to use.
-- **max_redirects**-- *(optional)*The maximum number of redirect responses that should be followed.
-- **base_url**-- *(optional)*A URL to use as the base when building request URLs.
-- **transport**-- *(optional)*A transport class to use for sending requests over the network.
-- **trust_env**-- *(optional)*Enables or disables usage of environment variables for configuration.
-- **default_encoding**-- *(optional)*The default encoding to use for decoding response text, if no charset information is included in a response Content-Type header. Set to a callable for automatic character set detection. Default: "utf-8".
+- **auth** -*(optional)* An authentication class to use when sending
+requests.
+- **params** -*(optional)* Query parameters to include in request URLs, as
+a string, dictionary, or sequence of two-tuples.
+- **headers** -*(optional)* Dictionary of HTTP headers to include when
+sending requests.
+- **cookies** -*(optional)* Dictionary of Cookie items to include when
+sending requests.
+- **verify** -*(optional)* Either`True` to use an SSL context with the
+default CA bundle,`False` to disable verification, or an instance of`ssl.SSLContext` to use a custom context.
+- **http2** -*(optional)* A boolean indicating if HTTP/2 support should be
+enabled. Defaults to`False` .
+- **proxy** -*(optional)* A proxy URL where all the traffic should be routed.
+- **timeout** -*(optional)* The timeout configuration to use when sending
+requests.
+- **limits** -*(optional)* The limits configuration to use.
+- **max_redirects** -*(optional)* The maximum number of redirect responses
+that should be followed.
+- **base_url** -*(optional)* A URL to use as the base when building
+request URLs.
+- **transport** -*(optional)* A transport class to use for sending requests
+over the network.
+- **trust_env** -*(optional)* Enables or disables usage of environment
+variables for configuration.
+- **default_encoding** -*(optional)* The default encoding to use for decoding
+response text, if no charset information is included in a response Content-Type
+header. Set to a callable for automatic character set detection. Default: "utf-8".
 
-**headers**HTTP headers to include when sending requests.
+**headers**
+HTTP headers to include when sending requests.
 
-**cookies**Cookie values to include when sending requests.
+**cookies**
+Cookie values to include when sending requests.
 
-**params**Query parameters to include in the URL when sending requests.
+**params**
+Query parameters to include in the URL when sending requests.
 
-**auth**Authentication class used when none is passed at the request-level.
+**auth**
+Authentication class used when none is passed at the request-level.
 
 See also [Authentication](/quickstart/#authentication).
 
 *async*
 
-**request***self*,
+**request**
+*self*,
 
 *method*,
 
@@ -874,7 +944,8 @@ are merged with client-level configuration.
 
 *async*
 
-**get***self*,
+**get**
+*self*,
 
 *url*,
 
@@ -900,7 +971,8 @@ Send a `GET` request.
 
 *async*
 
-**head***self*,
+**head**
+*self*,
 
 *url*,
 
@@ -926,7 +998,8 @@ Send a `HEAD` request.
 
 *async*
 
-**options***self*,
+**options**
+*self*,
 
 *url*,
 
@@ -952,7 +1025,8 @@ Send an `OPTIONS` request.
 
 *async*
 
-**post***self*,
+**post**
+*self*,
 
 *url*,
 
@@ -986,7 +1060,8 @@ Send a `POST` request.
 
 *async*
 
-**put***self*,
+**put**
+*self*,
 
 *url*,
 
@@ -1020,7 +1095,8 @@ Send a `PUT` request.
 
 *async*
 
-**patch***self*,
+**patch**
+*self*,
 
 *url*,
 
@@ -1054,7 +1130,8 @@ Send a `PATCH` request.
 
 *async*
 
-**delete***self*,
+**delete**
+*self*,
 
 *url*,
 
@@ -1078,7 +1155,8 @@ Send a `DELETE` request.
 
 **Parameters**: See `httpx.request`.
 
-**stream***self*,
+**stream**
+*self*,
 
 *method*,
 
@@ -1115,7 +1193,8 @@ instead of loading it into memory at once.
 
 See also: [Streaming Responses](/quickstart#streaming-responses)
 
-**build_request***self*,
+**build_request**
+*self*,
 
 *method*,
 
@@ -1143,14 +1222,16 @@ See also: [Streaming Responses](/quickstart#streaming-responses)
 
 Build and return a request instance.
 
-- The `params`,`headers`and`cookies`arguments are merged with any values set on the client.
-- The `url`argument is merged with any`base_url`set on the client.
+- The `params` ,`headers` and`cookies` arguments
+are merged with any values set on the client.
+- The `url` argument is merged with any`base_url` set on the client.
 
 See also: [Request instances](/advanced/clients/#request-instances)
 
 *async*
 
-**send***self*,
+**send**
+*self*,
 
 *request*,
 
@@ -1174,48 +1255,50 @@ See also: [Request instances](/advanced/clients/#request-instances)
 
 *async*
 
-**aclose***self*)
+**aclose**
+*self*)
 
 Close transport and proxies.
 
-`Response`
+## `Response`
 
 *An HTTP response.*
 
 - `def __init__(...)`
-- `.status_code`-- **int**
-- `.reason_phrase`-- **str**
-- `.http_version`-- `"HTTP/2"`or- `"HTTP/1.1"`
-- `.url`-- **URL**
-- `.headers`-- **Headers**
-- `.content`-- **bytes**
-- `.text`-- **str**
-- `.encoding`-- **str**
-- `.is_redirect`-- **bool**
-- `.request`-- **Request**
-- `.next_request`-- **Optional[Request]**
-- `.cookies`-- **Cookies**
-- `.history`-- **List[Response]**
-- `.elapsed`-- [timedelta](https://docs.python.org/3/library/datetime.html)
-- The amount of time elapsed between sending the request and calling `close()`on the corresponding response received for that request.[total_seconds()](https://docs.python.org/3/library/datetime.html#datetime.timedelta.total_seconds)to correctly get the total elapsed seconds.
-- `def .raise_for_status()`-- **Response**
-- `def .json()`-- **Any**
-- `def .read()`-- **bytes**
-- `def .iter_raw([chunk_size])`-- **bytes iterator**
-- `def .iter_bytes([chunk_size])`-- **bytes iterator**
-- `def .iter_text([chunk_size])`-- **text iterator**
-- `def .iter_lines()`-- **text iterator**
-- `def .close()`-- **None**
-- `def .next()`-- **Response**
-- `def .aread()`-- **bytes**
-- `def .aiter_raw([chunk_size])`-- **async bytes iterator**
-- `def .aiter_bytes([chunk_size])`-- **async bytes iterator**
-- `def .aiter_text([chunk_size])`-- **async text iterator**
-- `def .aiter_lines()`-- **async text iterator**
-- `def .aclose()`-- **None**
-- `def .anext()`-- **Response**
+- `.status_code` -**int**
+- `.reason_phrase` -**str**
+- `.http_version` -`"HTTP/2"` or`"HTTP/1.1"`
+- `.url` -**URL**
+- `.headers` -**Headers**
+- `.content` -**bytes**
+- `.text` -**str**
+- `.encoding` -**str**
+- `.is_redirect` -**bool**
+- `.request` -**Request**
+- `.next_request` -**Optional[Request]**
+- `.cookies` -**Cookies**
+- `.history` -**List[Response]**
+- `.elapsed` -**[timedelta](https://docs.python.org/3/library/datetime.html)**
+- The amount of time elapsed between sending the request and calling `close()` on the corresponding response received for that request.[total_seconds()](https://docs.python.org/3/library/datetime.html#datetime.timedelta.total_seconds) to correctly get
+  the total elapsed seconds.
+- `def .raise_for_status()` -**Response**
+- `def .json()` -**Any**
+- `def .read()` -**bytes**
+- `def .iter_raw([chunk_size])` -**bytes iterator**
+- `def .iter_bytes([chunk_size])` -**bytes iterator**
+- `def .iter_text([chunk_size])` -**text iterator**
+- `def .iter_lines()` -**text iterator**
+- `def .close()` -**None**
+- `def .next()` -**Response**
+- `def .aread()` -**bytes**
+- `def .aiter_raw([chunk_size])` -**async bytes iterator**
+- `def .aiter_bytes([chunk_size])` -**async bytes iterator**
+- `def .aiter_text([chunk_size])` -**async text iterator**
+- `def .aiter_lines()` -**async text iterator**
+- `def .aclose()` -**None**
+- `def .anext()` -**Response**
 
-`Request`
+## `Request`
 
 *An HTTP request. Can be constructed explicitly for more control over exactly
 what gets sent over the wire.*
@@ -1225,13 +1308,13 @@ what gets sent over the wire.*
 >>> response = client.send(request)
 ```
 - `def __init__(method, url, [params], [headers], [cookies], [content], [data], [files], [json], [stream])`
-- `.method`-- **str**
-- `.url`-- **URL**
-- `.content`-- **byte**,- **byte iterator**, or- **byte async iterator**
-- `.headers`-- **Headers**
-- `.cookies`-- **Cookies**
+- `.method` -**str**
+- `.url` -**URL**
+- `.content` -**byte** ,**byte iterator** , or**byte async iterator**
+- `.headers` -**Headers**
+- `.cookies` -**Cookies**
 
-`URL`
+## `URL`
 
 *A normalized, IDNA supporting URL.*
 
@@ -1241,20 +1324,20 @@ what gets sent over the wire.*
 'example.org'
 ```
 - `def __init__(url, **kwargs)`
-- `.scheme`-- **str**
-- `.authority`-- **str**
-- `.host`-- **str**
-- `.port`-- **int**
-- `.path`-- **str**
-- `.query`-- **str**
-- `.raw_path`-- **str**
-- `.fragment`-- **str**
-- `.is_ssl`-- **bool**
-- `.is_absolute_url`-- **bool**
-- `.is_relative_url`-- **bool**
-- `def .copy_with([scheme], [authority], [path], [query], [fragment])`-- **URL**
+- `.scheme` -**str**
+- `.authority` -**str**
+- `.host` -**str**
+- `.port` -**int**
+- `.path` -**str**
+- `.query` -**str**
+- `.raw_path` -**str**
+- `.fragment` -**str**
+- `.is_ssl` -**bool**
+- `.is_absolute_url` -**bool**
+- `.is_relative_url` -**bool**
+- `def .copy_with([scheme], [authority], [path], [query], [fragment])` -**URL**
 
-`Headers`
+## `Headers`
 
 *A case-insensitive multi-dict.*
 
@@ -1264,9 +1347,9 @@ what gets sent over the wire.*
 'application/json'
 ```
 - `def __init__(self, headers, encoding=None)`
-- `def copy()`-- **Headers**
+- `def copy()` -**Headers**
 
-`Cookies`
+## `Cookies`
 
 *A dict-like cookie store.*
 
@@ -1275,7 +1358,7 @@ what gets sent over the wire.*
 >>> cookies.set("name", "value", domain="example.org")
 ```
 - `def __init__(cookies: [dict, Cookies, CookieJar])`
-- `.jar`-- **CookieJar**
+- `.jar` -**CookieJar**
 - `def extract_cookies(response)`
 - `def set_cookie_header(request)`
 - `def set(name, value, [domain], [path])`
@@ -1284,7 +1367,7 @@ what gets sent over the wire.*
 - `def clear([domain], [path])`
 - *Standard mutable mapping interface*
 
-`Proxy`
+## `Proxy`
 
 *A configuration of the proxy server.*
 
@@ -1293,10 +1376,10 @@ what gets sent over the wire.*
 >>> client = Client(proxy=proxy)
 ```
 - `def __init__(url, [ssl_context], [auth], [headers])`
-- `.url`-- **URL**
-- `.auth`-- **tuple[str, str]**
-- `.headers`-- **Headers**
-- `.ssl_context`-- **SSLContext**
+- `.url` -**URL**
+- `.auth` -**tuple[str, str]**
+- `.headers` -**Headers**
+- `.ssl_context` -**SSLContext**
 
 # Citations
 

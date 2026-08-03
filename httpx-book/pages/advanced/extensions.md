@@ -3,7 +3,7 @@ type: Web Page
 title: Extensions - HTTPX
 description: A next-generation HTTP client for Python.
 resource: https://www.python-httpx.org/advanced/extensions
-timestamp: '2026-07-09T12:16:45.224822+00:00'
+timestamp: '2026-08-03T09:33:05.936318+00:00'
 ---
 
 # Extensions
@@ -37,7 +37,7 @@ print(response.extensions["http_version"])  # b"HTTP/1.1"
 ```
 ## Request Extensions
 
-`"trace"`
+### `"trace"`
 
 The trace extension allows a callback handler to be installed to monitor the internal
 flow of events within the underlying `httpcore` transport.
@@ -67,9 +67,9 @@ response = client.get("https://www.example.com/", extensions={"trace": log})
 ```
 The `event_name` and `info` arguments here will be one of the following:
 
-- `{event_type}.{event_name}.started`,- `<dictionary of keyword arguments>`
-- `{event_type}.{event_name}.complete`,- `{"return_value": <...>}`
-- `{event_type}.{event_name}.failed`,- `{"exception": <...>}`
+- `{event_type}.{event_name}.started` ,`<dictionary of keyword arguments>`
+- `{event_type}.{event_name}.complete` ,`{"return_value": <...>}`
+- `{event_type}.{event_name}.failed` ,`{"exception": <...>}`
 
 Note that when using async code the handler function passed to `"trace"` must be an `async def ...` function.
 
@@ -100,7 +100,7 @@ The following event types are currently exposed...
 
 The exact set of trace events may be subject to change across different versions of `httpcore`. If you need to rely on a particular set of events it is recommended that you pin installation of the package to a fixed version.
 
-`"sni_hostname"`
+### `"sni_hostname"`
 
 The server's hostname, which is used to confirm the hostname supplied by the SSL certificate.
 
@@ -120,7 +120,7 @@ response = client.get(
     extensions=extensions
 )
 ```
-`"timeout"`
+### `"timeout"`
 
 A dictionary of `str: Optional[float]` timeout values.
 
@@ -139,7 +139,7 @@ response = client.get(
 ```
 This extension is how the `httpx` timeouts are implemented, ensuring that the timeout values are associated with the request instance and passed throughout the stack. You shouldn't typically be working with this extension directly, but use the higher level `timeout` API instead.
 
-`"target"`
+### `"target"`
 
 The target that is used as [the HTTP target instead of the URL path](https://datatracker.ietf.org/doc/html/rfc2616#section-5.1.2).
 
@@ -147,8 +147,8 @@ This enables support constructing requests that would otherwise be unsupported.
 
 - URL paths with non-standard escaping applied.
 - Forward proxy requests using an absolute URI.
-- Tunneling proxy requests using `CONNECT`with hostname as the target.
-- Server-wide `OPTIONS *`requests.
+- Tunneling proxy requests using `CONNECT` with hostname as the target.
+- Server-wide `OPTIONS *` requests.
 
 Some examples:
 
@@ -180,7 +180,7 @@ response = httpx.request("CONNECT", "https://www.example.com", extensions=extens
 ```
 ## Response Extensions
 
-`"http_version"`
+### `"http_version"`
 
 The HTTP version, as bytes. Eg. `b"HTTP/1.1"`.
 
@@ -188,7 +188,7 @@ When using HTTP/1.1 the response line includes an explicit version, and the valu
 
 When using HTTP/2 there is no further response versioning included in the protocol, and the value of this key will always be `b"HTTP/2"`.
 
-`"reason_phrase"`
+### `"reason_phrase"`
 
 The reason-phrase of the HTTP response, as bytes. For example `b"OK"`. Some servers may include a custom reason phrase, although this is not recommended.
 
@@ -196,11 +196,11 @@ HTTP/2 onwards does not include a reason phrase on the wire.
 
 When no key is included, a default based on the status code may be used.
 
-`"stream_id"`
+### `"stream_id"`
 
 When HTTP/2 is being used the `"stream_id"` response extension can be accessed to determine the ID of the data stream that the response was sent on.
 
-`"network_stream"`
+### `"network_stream"`
 
 The `"network_stream"` extension allows developers to handle HTTP `CONNECT` and `Upgrade` requests, by providing an API that steps outside the standard request/response model, and can directly read or write to the network.
 

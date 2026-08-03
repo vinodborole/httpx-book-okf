@@ -3,7 +3,7 @@ type: Web Page
 title: Event Hooks - HTTPX
 description: A next-generation HTTP client for Python.
 resource: https://www.python-httpx.org/advanced/event-hooks
-timestamp: '2026-07-07T08:53:45.702113+00:00'
+timestamp: '2026-08-03T09:33:05.936318+00:00'
 ---
 
 # Event Hooks
@@ -12,8 +12,8 @@ HTTPX allows you to register "event hooks" with the client, that are called ever
 
 There are currently two event hooks:
 
-- `request`- Called after a request is fully prepared, but before it is sent to the network. Passed the- `request`instance.
-- `response`- Called after the response has been fetched from the network, but before it is returned to the caller. Passed the- `response`instance.
+- `request` - Called after a request is fully prepared, but before it is sent to the network. Passed the`request` instance.
+- `response` - Called after the response has been fetched from the network, but before it is returned to the caller. Passed the`response` instance.
 
 These allow you to install client-wide functionality such as logging, monitoring or tracing.
 

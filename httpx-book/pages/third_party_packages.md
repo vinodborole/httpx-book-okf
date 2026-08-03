@@ -3,7 +3,7 @@ type: Web Page
 title: Third Party Packages - HTTPX
 description: A next-generation HTTP client for Python.
 resource: https://www.python-httpx.org/third_party_packages
-timestamp: '2026-07-09T12:16:45.224822+00:00'
+timestamp: '2026-08-03T09:33:05.936318+00:00'
 ---
 
 # Third Party Packages
@@ -78,7 +78,7 @@ Record and repeat requests.
 
 ### urllib3-transport
 
-This public gist provides an example implementation for a [custom transport](../advanced/transports/#custom-transports) implementation on top of the battle-tested [ urllib3](https://urllib3.readthedocs.io) library.
+This public gist provides an example implementation for a [custom transport](../advanced/transports/#custom-transports) implementation on top of the battle-tested [`urllib3`](https://urllib3.readthedocs.io) library.
 
 # Citations
 

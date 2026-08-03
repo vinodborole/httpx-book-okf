@@ -3,7 +3,7 @@ type: Web Page
 title: Requests Compatibility - HTTPX
 description: A next-generation HTTP client for Python.
 resource: https://www.python-httpx.org/compatibility
-timestamp: '2026-07-09T12:16:45.224822+00:00'
+timestamp: '2026-08-03T09:33:05.936318+00:00'
 ---
 
 # Requests Compatibility Guide
@@ -133,11 +133,11 @@ with httpx.stream("GET", "https://www.example.com") as response:
 ```
 Within a `stream()` block request data is made available with:
 
-- `.iter_bytes()`- Instead of- `response.iter_content()`
-- `.iter_text()`- Instead of- `response.iter_content(decode_unicode=True)`
-- `.iter_lines()`- Corresponding to- `response.iter_lines()`
-- `.iter_raw()`- Use this instead of- `response.raw`
-- `.read()`- Read the entire response body, making- `response.text`and- `response.content`available.
+- `.iter_bytes()` - Instead of`response.iter_content()`
+- `.iter_text()` - Instead of`response.iter_content(decode_unicode=True)`
+- `.iter_lines()` - Corresponding to`response.iter_lines()`
+- `.iter_raw()` - Use this instead of`response.raw`
+- `.read()` - Read the entire response body, making`response.text` and`response.content` available.
 
 ## Timeouts
 
@@ -189,7 +189,7 @@ We don't support `response.is_ok` since the naming is ambiguous there, and might
 
 There is no notion of [prepared requests](https://requests.readthedocs.io/en/stable/user/advanced/#prepared-requests) in HTTPX. If you need to customize request instantiation, see [Request instances](../advanced/clients/#request-instances).
 
-Besides, `httpx.Request()` does not support the `auth`, `timeout`, `follow_redirects`, `mounts`, `verify` and `cert` parameters. However these are available in `httpx.request`, `httpx.get`, `httpx.post` etc., as well as on [ Client instances](../advanced/clients/#client-instances).
+Besides, `httpx.Request()` does not support the `auth`, `timeout`, `follow_redirects`, `mounts`, `verify` and `cert` parameters. However these are available in `httpx.request`, `httpx.get`, `httpx.post` etc., as well as on [`Client` instances](../advanced/clients/#client-instances).
 
 ## Mocking
 
@@ -201,7 +201,7 @@ If you use `cachecontrol` or `requests-cache` to add HTTP Caching support to the
 
 ## Networking layer
 
-`requests` defers most of its HTTP networking code to the excellent [ urllib3 library](https://urllib3.readthedocs.io/en/latest/).
+`requests` defers most of its HTTP networking code to the excellent [`urllib3` library](https://urllib3.readthedocs.io/en/latest/).
 
 On the other hand, HTTPX uses [HTTPCore](https://github.com/encode/httpcore) as its core HTTP networking layer, which is a different project than `urllib3`.
 
